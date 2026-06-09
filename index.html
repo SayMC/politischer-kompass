@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politischer Kompass — Handel & Wirtschaft</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ══════════════════ GLOBE ══════════════════ -->
+<canvas id="globe-canvas"></canvas>
+
+<!-- ══════════════════ LANDING ══════════════════ -->
+<div class="screen" id="landing">
+
+    <!-- Scroll-driven globe hero -->
+    <section class="hero-stage">
+        <div class="hero-sticky">
+            <div class="hero-kicker">
+                <span class="badge-dot"></span>
+                Politischer Kompass
+            </div>
+            <h2 class="hero-headline">Die Welt<br>handelt.</h2>
+            <div class="hero-coord">LAT <b>51.9°N</b> · LON <b>4.5°E</b> · ROTTERDAM → SHANGHAI</div>
+            <p class="hero-sub">Routen, Waren und Kapital umkreisen den Globus. Wo stehst du in dieser Ordnung?</p>
+            <div class="scroll-cue">
+                Scrolle, um die Welt zu drehen
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- The original landing content, revealed at the end of the scroll -->
+    <div class="landing-stage">
+    <div class="landing-wrap">
+        <div class="badge">
+            <span class="badge-dot"></span>
+            Politischer Kompass
+        </div>
+
+        <h1 class="landing-title">Handel, Wohlstand<br>& globale Ordnung</h1>
+
+        <p class="landing-desc">
+            Wo stehst du in Fragen des Welthandels, der Wirtschaftspolitik
+            und der globalen Governance? Dieser Test verortet dich auf drei Achsen.
+        </p>
+
+        <div class="axis-chips">
+            <span class="chip chip-trade">↔ Freihandel · Protektionismus</span>
+            <span class="chip chip-economy">↕ Wachstum · Postwachstum</span>
+            <span class="chip chip-governance">◈ Globalismus · Souveränität</span>
+        </div>
+
+        <div class="landing-meta">
+            <span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                30 Fragen
+            </span>
+            <span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                ca. 15 Minuten
+            </span>
+            <span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                Anonym
+            </span>
+        </div>
+
+        <button class="btn-primary" onclick="startQuiz()">
+            Jetzt starten
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+
+        <br>
+        <a class="about-link" href="#about">Über dieses Projekt &amp; Quellen ↓</a>
+    </div>
+    </div><!-- /.landing-stage -->
+
+    <!-- ══════════════════ ABOUT ══════════════════ -->
+    <section id="about">
+        <div class="about-kicker">// Über dieses Projekt</div>
+        <h2>Was dieser Kompass ist — und was nicht</h2>
+
+        <div class="about-block">
+            <h3>Wer &amp; warum</h3>
+            <p>Dieser politische Kompass ist ein <b>Schülerprojekt im Fach Politische Bildung (PB)</b>.
+               Er behandelt den Themenkomplex <b>Welthandel, Wirtschaft und globale Ordnung</b> —
+               von Freihandel und Protektionismus über Postwachstumsökonomie bis zur Rolle der WTO.</p>
+            <p>Das Ziel ist nicht nur eine Verortung, sondern <b>Wissensvermittlung</b>: Jede Frage
+               erklärt, was Zustimmung und Ablehnung inhaltlich bedeuten, liefert Kontext aus Forschung
+               und Politik und lässt sich auf Wunsch in einfache Sprache übersetzen.</p>
+        </div>
+
+        <div class="about-block">
+            <h3>Die drei Achsen</h3>
+            <ul>
+                <li class="ax-trade"><b>Handelsordnung</b> — Protektionismus ↔ Freihandel:
+                    Sollen Märkte offen sein, oder dürfen Staaten ihre Wirtschaft schützen?</li>
+                <li class="ax-economy"><b>Wirtschaftsmodell</b> — Postwachstum ↔ Wachstum:
+                    Braucht Wohlstand dauerhaftes Wachstum, oder geht es auch ohne?</li>
+                <li class="ax-governance"><b>Governance</b> — Nationale Souveränität ↔ Globalismus:
+                    Wer soll Handelsregeln setzen — Nationalstaaten oder internationale Institutionen?</li>
+            </ul>
+            <p style="margin-top:.8rem">Deine 30 Antworten (je −3 bis +3) werden pro Achse gemittelt
+               und auf einen Wert von −100 bis +100 umgerechnet.</p>
+        </div>
+
+        <div class="about-block">
+            <h3>Quellen &amp; Methodik</h3>
+            <p>Die Positionen der sechs Bundestagsparteien beruhen auf dem
+               <b>Chapel Hill Expert Survey 2024</b> (chesdata.eu), dem <b>Manifesto Project</b> (MARPOR),
+               den <b>Wahlprogrammen zur Bundestagswahl 2025</b> sowie Materialien des
+               <b>Wahl-O-Mat / der bpb</b>.</p>
+            <p>Wichtig: Die Parteiwerte sind eine <b>fundierte Schätzung, keine offizielle Messung</b>.
+               Auch die Zuordnung der Fragen zu den Achsen enthält Interpretationsspielraum —
+               der Kompass ist ein Lern- und Diskussionswerkzeug, kein wissenschaftliches Instrument.</p>
+        </div>
+
+        <div class="about-block">
+            <h3>Datenschutz</h3>
+            <p>Der Kompass läuft vollständig in deinem Browser. <b>Keine Antwort wird gespeichert
+               oder übertragen</b> — nach dem Neuladen der Seite ist alles weg.</p>
+        </div>
+
+        <div class="about-foot">PB-Projekt · Politischer Kompass — Handel &amp; Wirtschaft</div>
+    </section>
+</div>
+
+<!-- ══════════════════ PROGRESS ══════════════════ -->
+<div id="progressBar" style="display:none">
+    <div id="progressFill" style="width:3.33%"></div>
+</div>
+<div id="progressLabel" style="display:none">1 / 30</div>
+
+<!-- ══════════════════ QUIZ ══════════════════ -->
+<div class="screen hidden" id="quiz">
+    <div class="quiz-grid">
+
+        <!-- Question Panel -->
+        <div class="q-panel" id="qPanel">
+            <div class="topic-pill pill-trade" id="topicPill">⇄ Freihandel &amp; Wohlstand</div>
+
+            <div class="q-meta">
+                <span class="q-num" id="qNum">Frage 1 von 30</span>
+                <button class="btn-simplify" id="simplifyBtn" onclick="toggleSimplify()">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+                    Vereinfachen
+                </button>
+            </div>
+
+            <div class="q-text" id="qText">
+                Wenn Länder das produzieren, was sie am effizientesten herstellen können,
+                profitieren alle vom Handel.
+                [<span class="term" onclick="toggleTerm(event,this)">komparativer&nbsp;Vorteil<span class="term-i">i</span>
+                    <div class="tooltip">
+                        <div class="tooltip-term">Komparativer Vorteil</div>
+                        Selbst wenn ein Land bei allem schlechter ist, lohnt es sich zu handeln — solange es sich auf das spezialisiert, wobei es relativ am wenigsten benachteiligt ist. Theorie von David Ricardo (1817).
+                    </div>
+                </span>]
+            </div>
+
+            <!-- Slider -->
+            <div class="slider-section">
+                <div class="slider-labels">
+                    <span class="lbl-disagree">Stimme gar nicht zu</span>
+                    <span class="lbl-agree">Stimme voll zu</span>
+                </div>
+                <div class="cslider" id="cSlider">
+                    <div class="cslider-track" id="cTrack">
+                        <div class="cslider-center"></div>
+                        <div class="cslider-fill" id="cFill"></div>
+                        <div class="cslider-thumb" id="cThumb"></div>
+                    </div>
+                </div>
+                <div class="slider-hint" id="sliderHint">← Ziehe den Regler, um deine Antwort zu geben →</div>
+                <div class="slider-val" id="sliderVal"></div>
+            </div>
+
+            <!-- Navigation -->
+            <div class="q-nav">
+                <button class="btn-nav btn-back" onclick="prevQ()">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                    Zurück
+                </button>
+                <button class="btn-nav btn-next" id="nextBtn" onclick="nextQ()">
+                    Weiter
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-card">
+                <div class="sidebar-head">
+                    <div class="sidebar-icon" id="sideIcon">📖</div>
+                    <div>
+                        <div class="sidebar-title" id="sideTitle">Hintergrund</div>
+                        <div class="sidebar-sub" id="sideSub">Freihandel &amp; Wohlstand</div>
+                    </div>
+                </div>
+                <div class="sidebar-body" id="sideBody">
+                    <div class="expl-section">
+                        <div class="expl-label agree-lbl">
+                            <span class="expl-dot agree"></span>Zustimmung bedeutet
+                        </div>
+                        <div class="expl-text">
+                            Du vertraust darauf, dass freier Handel durch Spezialisierung
+                            Wohlstand für alle schafft. Länder sollen das produzieren, was sie
+                            am besten können — der Rest folgt durch Tausch.
+                        </div>
+                    </div>
+                    <div class="expl-divider"></div>
+                    <div class="expl-section">
+                        <div class="expl-label disagree-lbl">
+                            <span class="expl-dot disagree"></span>Ablehnung bedeutet
+                        </div>
+                        <div class="expl-text">
+                            Du bezweifelst, dass Handelsgewinne wirklich alle erreichen.
+                            Bestimmte Regionen verlieren Industrien, Löhne sinken in
+                            betroffenen Sektoren — die Theorie ignoriert Verlierer.
+                        </div>
+                    </div>
+                    <div class="expl-divider"></div>
+                    <div class="expl-section">
+                        <div class="expl-label context-lbl">
+                            <span class="expl-dot context"></span>Kontext
+                        </div>
+                        <div class="expl-text">
+                            David Ricardos Theorie des <em>komparativen Vorteils</em> (1817)
+                            ist das wichtigste Argument für Freihandel. Aber: Empirisch
+                            zeigen Studien, dass die Gewinne sehr ungleich verteilt sind —
+                            etwa in Regionen, die durch Billigimporte deindustrialisiert wurden.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile FAB -->
+    <button class="fab" onclick="toggleMobileSide()" id="fab">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+    </button>
+</div>
+
+<!-- ══════════════════ RESULT ══════════════════ -->
+<div class="screen hidden" id="result">
+    <div class="result-wrap">
+        <div class="badge" style="margin-bottom:1.5rem">
+            <span class="badge-dot" style="background:#34d399;box-shadow:0 0 8px #34d399"></span>
+            Dein Ergebnis
+        </div>
+        <h2 class="result-title">Deine politische Position</h2>
+        <p class="result-sub">Dreh das Modell, zoom heran und tippe eine Partei an, um ihre Position zu verstehen.</p>
+
+        <div id="compass3d-area" style="position:relative">
+            <div id="compass3d-wrap">
+                <canvas id="compass3d"></canvas>
+                <div class="c3d-hint">Ziehen = drehen · Scrollen / 2 Finger = zoomen</div>
+            </div>
+            <div class="party-card" id="partyCard"></div>
+        </div>
+
+        <div class="result-section">
+            <div class="result-section-title">Deine Position auf den drei Achsen</div>
+
+            <div class="axis-row">
+                <div class="axis-row-head">
+                    <span class="axis-row-name">↔ Handelsordnung</span>
+                    <span class="axis-val" id="valTrade">–</span>
+                </div>
+                <div class="axis-poles">
+                    <span>← Protektionismus</span>
+                    <span>Freihandel →</span>
+                </div>
+                <div class="axis-bar">
+                    <div class="axis-fill fill-trade" id="fillTrade"></div>
+                </div>
+                <p class="axis-exp" id="expTrade"></p>
+            </div>
+
+            <div class="axis-row">
+                <div class="axis-row-head">
+                    <span class="axis-row-name">↕ Wirtschaftsmodell</span>
+                    <span class="axis-val" id="valEconomy">–</span>
+                </div>
+                <div class="axis-poles">
+                    <span>← Postwachstum</span>
+                    <span>Wachstum →</span>
+                </div>
+                <div class="axis-bar">
+                    <div class="axis-fill fill-economy" id="fillEconomy"></div>
+                </div>
+                <p class="axis-exp" id="expEconomy"></p>
+            </div>
+
+            <div class="axis-row">
+                <div class="axis-row-head">
+                    <span class="axis-row-name">◈ Governance</span>
+                    <span class="axis-val" id="valGovernance">–</span>
+                </div>
+                <div class="axis-poles">
+                    <span>← Nationale Souveränität</span>
+                    <span>Globalismus →</span>
+                </div>
+                <div class="axis-bar">
+                    <div class="axis-fill fill-governance" id="fillGovernance"></div>
+                </div>
+                <p class="axis-exp" id="expGovernance"></p>
+            </div>
+
+            <p class="overall-blurb" id="overallBlurb"></p>
+        </div>
+
+        <div class="result-section">
+            <div class="result-section-title">Parteien im Vergleich</div>
+            <p class="axis-exp" style="margin-top:0">
+                Einordnung auf Basis von Chapel Hill Expert Survey 2024, Manifesto Project und den
+                Wahlprogrammen 2025 — fundierte Schätzung, keine offizielle Messung.
+                Tippe einen Punkt im Modell oder einen Namen an.
+            </p>
+            <div class="party-legend" id="partyLegend"></div>
+        </div>
+
+        <div style="margin-top:2.5rem;text-align:center">
+            <button class="btn-primary" onclick="restartQuiz()"
+                style="background:transparent;box-shadow:none;border:1px solid var(--border-strong);color:var(--text)">
+                ↺ Neu starten
+            </button>
+            <br>
+            <button class="link-btn" style="margin-top:1.2rem" onclick="goAbout()">Über dieses Projekt &amp; Quellen</button>
+        </div>
+    </div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/scoring.js"></script>
+<script>
+// ══════════════════════════════════════════
+//  QUESTION DATA
+// ══════════════════════════════════════════
+// QUESTIONS kommt jetzt aus js/data.js (window.QUESTIONS)
+const QUESTIONS = window.QUESTIONS;
+
+// ══════════════════════════════════════════
+//  RUNTIME STATE
+// ══════════════════════════════════════════
+const TOTAL = QUESTIONS.length;
+let cur = 0;
+let answered = {};
+let simplified = false;
+let mobileSideOpen = false;
+
+const LABELS = [
+    'Stimme gar nicht zu',
+    'Stimme nicht zu',
+    'Stimme eher nicht zu',
+    'Kein klares Urteil',
+    'Stimme eher zu',
+    'Stimme zu',
+    'Stimme voll zu'
+];
+
+// ── processText: replace [[term]] with tooltip HTML ──
+function processText(text, terms) {
+    return text.replace(/\[\[([^\]]+)\]\]/g, (_, term) => {
+        const def = terms[term] || '';
+        return `<span class="term" onclick="toggleTerm(event,this)">${term}<span class="term-i">i</span><div class="tooltip"><div class="tooltip-term">${term}</div>${def}</div></span>`;
+    });
+}
+
+// ── loadQuestion: populate all UI from data ──
+function loadQuestion(idx) {
+    const q = QUESTIONS[idx];
+
+    // Topic pill
+    const pill = document.getElementById('topicPill');
+    pill.className = `topic-pill ${q.topicClass}`;
+    pill.textContent = q.topic;
+
+    // Question text
+    document.getElementById('qText').innerHTML = processText(q.text, q.terms);
+
+    // Sidebar – always reset to explanation view
+    simplified = false;
+    const btn = document.getElementById('simplifyBtn');
+    btn.classList.remove('active');
+    btn.innerHTML = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg> Vereinfachen`;
+
+    document.getElementById('sideIcon').textContent  = '📖';
+    document.getElementById('sideTitle').textContent = 'Zur Frage';
+    document.getElementById('sideSub').textContent   = q.sideSub;
+    document.getElementById('sideBody').className    = 'sidebar-body';
+    document.getElementById('sideBody').innerHTML    = `
+        <div class="expl-section">
+            <div class="expl-label agree-lbl"><span class="expl-dot agree"></span>Zustimmung bedeutet</div>
+            <div class="expl-text">${q.agree}</div>
+        </div>
+        <div class="expl-divider"></div>
+        <div class="expl-section">
+            <div class="expl-label disagree-lbl"><span class="expl-dot disagree"></span>Ablehnung bedeutet</div>
+            <div class="expl-text">${q.disagree}</div>
+        </div>
+        <div class="expl-divider"></div>
+        <div class="expl-section">
+            <div class="expl-label context-lbl"><span class="expl-dot context"></span>Kontext</div>
+            <div class="expl-text">${q.context}</div>
+        </div>`;
+
+    // Store simple version
+    window._currentSimple = q.simple;
+}
+
+// ── Screen transitions ──
+function showScreen(fromId, toId) {
+    const from = document.getElementById(fromId);
+    const to   = document.getElementById(toId);
+    from.classList.add('exit-left');
+    setTimeout(() => {
+        from.classList.add('hidden');
+        from.classList.remove('exit-left');
+        to.classList.remove('hidden');
+    }, 380);
+}
+
+function startQuiz() {
+    if (window.__globe) window.__globe.pause();
+    showScreen('landing', 'quiz');
+    document.getElementById('progressBar').style.display = 'block';
+    document.getElementById('progressLabel').style.display = 'block';
+    loadQuestion(0);
+    updateProgress();
+    csInit();
+}
+
+// ── Custom Slider ──
+let csDragging = false;
+
+function csInit() {
+    const el = document.getElementById('cSlider');
+    if (!el) return;
+    el.addEventListener('mousedown',  csStart, { passive: false });
+    el.addEventListener('touchstart', csStart, { passive: false });
+}
+
+function csClientX(e) {
+    return e.touches ? e.touches[0].clientX : e.clientX;
+}
+function csLastX(e) {
+    return e.changedTouches ? e.changedTouches[0].clientX : e.clientX;
+}
+
+function csPct(clientX) {
+    const r = document.getElementById('cTrack').getBoundingClientRect();
+    return Math.max(0, Math.min(1, (clientX - r.left) / r.width));
+}
+
+// pct 0..1 → value -3..3
+function pctToVal(pct) { return pct * 6 - 3; }
+// value -3..3 → pct 0..1
+function valToPct(v)   { return (v + 3) / 6; }
+
+function csRender(pct, snap) {
+    const fill  = document.getElementById('cFill');
+    const thumb = document.getElementById('cThumb');
+    const valEl = document.getElementById('sliderVal');
+
+    // Show thumb
+    thumb.classList.add('visible');
+    thumb.style.left = (pct * 100).toFixed(2) + '%';
+
+    // Bidirectional fill from center (50%)
+    fill.classList.add('visible');
+    if (pct >= 0.5) {
+        // Right of center = agree = green
+        fill.style.left       = '50%';
+        fill.style.width      = ((pct - 0.5) * 100).toFixed(2) + '%';
+        fill.style.background = '#4db6ac';
+    } else {
+        // Left of center = disagree = pink
+        fill.style.left       = (pct * 100).toFixed(2) + '%';
+        fill.style.width      = ((0.5 - pct) * 100).toFixed(2) + '%';
+        fill.style.background = '#d9897a';
+    }
+
+    // Update value label color to match side
+    valEl.style.color = pct >= 0.5 ? '#4db6ac' : '#d9897a';
+
+    document.getElementById('sliderHint').classList.add('gone');
+
+    if (snap) {
+        const snapped     = Math.round(pctToVal(pct));
+        const snappedPct  = valToPct(snapped);
+
+        // Animate thumb snap
+        thumb.style.transition = 'left .18s cubic-bezier(.34,1.56,.64,1)';
+        thumb.style.left       = (snappedPct * 100).toFixed(2) + '%';
+        setTimeout(() => { thumb.style.transition = ''; }, 220);
+
+        // Re-render fill at snapped position
+        csRender(snappedPct, false);
+
+        valEl.textContent = LABELS[snapped + 3];
+        valEl.classList.add('show');
+        document.getElementById('nextBtn').classList.add('on');
+        answered[cur] = snapped;
+    }
+}
+
+function csStart(e) {
+    e.preventDefault();
+    csDragging = true;
+    document.getElementById('cThumb').classList.add('active');
+    csRender(csPct(csClientX(e)), false);
+
+    document.addEventListener('mousemove',  csMove, { passive: false });
+    document.addEventListener('mouseup',    csEnd);
+    document.addEventListener('touchmove',  csMove, { passive: false });
+    document.addEventListener('touchend',   csEnd);
+}
+function csMove(e) {
+    if (!csDragging) return;
+    e.preventDefault();
+    csRender(csPct(csClientX(e)), false);
+}
+function csEnd(e) {
+    csDragging = false;
+    document.getElementById('cThumb').classList.remove('active');
+    csRender(csPct(csLastX(e)), true); // snap on release
+
+    document.removeEventListener('mousemove',  csMove);
+    document.removeEventListener('mouseup',    csEnd);
+    document.removeEventListener('touchmove',  csMove);
+    document.removeEventListener('touchend',   csEnd);
+}
+
+// ── Term tooltips ──
+function toggleTerm(e, el) {
+    e.stopPropagation();
+    const isOpen = el.classList.contains('open');
+    document.querySelectorAll('.term.open').forEach(t => t.classList.remove('open'));
+    if (!isOpen) el.classList.add('open');
+}
+document.addEventListener('click', () => {
+    document.querySelectorAll('.term.open').forEach(t => t.classList.remove('open'));
+});
+
+// ── Simplify toggle ──
+function toggleSimplify() {
+    simplified = !simplified;
+    const btn       = document.getElementById('simplifyBtn');
+    const sideTitle = document.getElementById('sideTitle');
+    const sideBody  = document.getElementById('sideBody');
+    const sideIcon  = document.getElementById('sideIcon');
+    const qText     = document.getElementById('qText');
+
+    btn.classList.toggle('active', simplified);
+
+    if (simplified) {
+        btn.innerHTML = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg> Vereinfacht`;
+
+        // Replace question text with simple version
+        qText.style.transition = 'opacity .25s ease';
+        qText.style.opacity = '0';
+        setTimeout(() => {
+            qText.textContent = window._currentSimple || '';
+            qText.style.color = '#ddd6fe';
+            qText.style.opacity = '1';
+        }, 200);
+
+        sideTitle.textContent = 'Einfache Erklärung';
+        sideIcon.textContent  = '💡';
+        sideBody.className    = 'sidebar-body simple';
+        sideBody.textContent  = window._currentSimple || '';
+    } else {
+        btn.innerHTML = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg> Vereinfachen`;
+
+        // Fade out, restore full question text with tooltips
+        qText.style.transition = 'opacity .25s ease';
+        qText.style.opacity = '0';
+        setTimeout(() => {
+            const q = QUESTIONS[cur];
+            qText.innerHTML = processText(q.text, q.terms);
+            qText.style.color = '';
+            qText.style.opacity = '1';
+        }, 200);
+
+        // Restore full sidebar explanation
+        const q = QUESTIONS[cur];
+        sideIcon.textContent  = '📖';
+        sideTitle.textContent = 'Zur Frage';
+        sideBody.className    = 'sidebar-body';
+        sideBody.innerHTML    = `
+            <div class="expl-section">
+                <div class="expl-label agree-lbl"><span class="expl-dot agree"></span>Zustimmung bedeutet</div>
+                <div class="expl-text">${q.agree}</div>
+            </div>
+            <div class="expl-divider"></div>
+            <div class="expl-section">
+                <div class="expl-label disagree-lbl"><span class="expl-dot disagree"></span>Ablehnung bedeutet</div>
+                <div class="expl-text">${q.disagree}</div>
+            </div>
+            <div class="expl-divider"></div>
+            <div class="expl-section">
+                <div class="expl-label context-lbl"><span class="expl-dot context"></span>Kontext</div>
+                <div class="expl-text">${q.context}</div>
+            </div>`;
+    }
+}
+
+// ── Navigation ──
+function updateProgress() {
+    const pct = ((cur + 1) / TOTAL * 100).toFixed(2);
+    document.getElementById('progressFill').style.width = pct + '%';
+    document.getElementById('progressLabel').textContent = `${cur + 1} / ${TOTAL}`;
+    document.getElementById('qNum').textContent = `Frage ${cur + 1} von ${TOTAL}`;
+}
+
+function animatePanel() {
+    const p = document.getElementById('qPanel');
+    p.style.transition = 'none';
+    p.style.opacity = '0';
+    p.style.transform = 'translateX(18px)';
+    requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+            p.style.transition = 'opacity .3s ease, transform .3s ease';
+            p.style.opacity = '1';
+            p.style.transform = 'none';
+        });
+    });
+}
+
+function resetSlider() {
+    const thumb = document.getElementById('cThumb');
+    const fill  = document.getElementById('cFill');
+    thumb.classList.remove('visible', 'active');
+    thumb.style.left       = '50%';
+    thumb.style.transition = '';
+    fill.classList.remove('visible');
+    fill.style.width = '0%';
+    document.getElementById('sliderHint').classList.remove('gone');
+    const valEl = document.getElementById('sliderVal');
+    valEl.classList.remove('show');
+    valEl.textContent = '';
+    document.getElementById('nextBtn').classList.remove('on');
+}
+
+function nextQ() {
+    if (!answered.hasOwnProperty(cur)) return;
+    if (cur >= TOTAL - 1) { showResult(); return; }
+    cur++;
+    loadQuestion(cur);
+    updateProgress();
+    resetSlider();
+    animatePanel();
+}
+
+function prevQ() {
+    if (cur <= 0) return;
+    cur--;
+    loadQuestion(cur);
+    updateProgress();
+    resetSlider();
+    if (answered.hasOwnProperty(cur)) {
+        const snapped    = answered[cur];
+        const snappedPct = valToPct(snapped);
+        csRender(snappedPct, false);
+        const valEl = document.getElementById('sliderVal');
+        valEl.textContent = LABELS[snapped + 3];
+        valEl.classList.add('show');
+        document.getElementById('nextBtn').classList.add('on');
+    }
+    animatePanel();
+}
+
+// ── Results ──
+function showResult() {
+    showScreen('quiz', 'result');
+    document.getElementById('progressBar').style.display = 'none';
+    document.getElementById('progressLabel').style.display = 'none';
+
+    if (!window.computeScores) {
+        // Modul nicht geladen (z.B. file:// oder Netzwerkfehler) — verständliche Meldung statt Absturz
+        document.getElementById('overallBlurb').textContent =
+            'Die Auswertung konnte nicht geladen werden. Bitte die Seite über einen lokalen Server (http://) öffnen und neu laden.';
+        return;
+    }
+    const scores = window.computeScores(answered, window.QUESTIONS); // {trade,economy,governance} -100..+100
+    window._scores = scores;
+
+    // Hilfsfunktion: Score -100..+100 → Balkenbreite 0..100 %
+    const toWidth = (v) => ((v + 100) / 2).toFixed(1) + '%';
+    const fmt = (v) => (v > 0 ? '+' : '') + v;
+
+    const axes = [
+      { key:'trade',      fill:'fillTrade',      val:'valTrade',      exp:'expTrade' },
+      { key:'economy',    fill:'fillEconomy',    val:'valEconomy',    exp:'expEconomy' },
+      { key:'governance', fill:'fillGovernance', val:'valGovernance', exp:'expGovernance' },
+    ];
+    axes.forEach(a => {
+      const v = scores[a.key];
+      const band = window.scoreBand(v);
+      document.getElementById(a.val).textContent = fmt(v);
+      document.getElementById(a.exp).textContent = window.AXIS_BLURBS[a.key][band];
+    });
+
+    // Gesamt-Einordnung
+    const s = window.AXIS_SHORT;
+    document.getElementById('overallBlurb').innerHTML =
+      `Deine Antworten zeichnen ein Profil, das <b>${s.trade[window.scoreBand(scores.trade)]}</b>, ` +
+      `<b>${s.economy[window.scoreBand(scores.economy)]}</b> und ` +
+      `<b>${s.governance[window.scoreBand(scores.governance)]}</b> ist.`;
+
+    // Balken animiert füllen
+    setTimeout(() => {
+      document.getElementById('fillTrade').style.width      = toWidth(scores.trade);
+      document.getElementById('fillEconomy').style.width    = toWidth(scores.economy);
+      document.getElementById('fillGovernance').style.width = toWidth(scores.governance);
+    }, 350);
+
+    // 3D-Kompass + Parteienlegende (Tasks 4 & 5)
+    if (window.__compass3d) window.__compass3d.render(scores);
+    if (window.renderPartyLegend) window.renderPartyLegend();
+}
+
+function restartQuiz() {
+    cur = 0; answered = {}; simplified = false;
+    loadQuestion(0);
+    showScreen('result', 'landing');
+    document.getElementById('landing').scrollTop = 0;
+    if (window.__globe) window.__globe.resume();
+    document.getElementById('progressBar').style.display = 'none';
+    document.getElementById('progressLabel').style.display = 'none';
+    document.getElementById('progressFill').style.width = '3.33%';
+    document.getElementById('fillTrade').style.width = '0%';
+    document.getElementById('fillEconomy').style.width = '0%';
+    document.getElementById('fillGovernance').style.width = '0%';
+    if (window.__compass3d) window.__compass3d.pause();
+    ['valTrade','valEconomy','valGovernance','expTrade','expEconomy','expGovernance','overallBlurb']
+      .forEach(id => { const el = document.getElementById(id); if (el) el.textContent = ''; });
+    const pc = document.getElementById('partyCard');
+    if (pc) { pc.classList.remove('show'); pc.innerHTML = ''; }
+    resetSlider();
+}
+
+// ── Zur About-Sektion (vom Ergebnis aus) ──
+function goAbout() {
+    if (window.__compass3d) window.__compass3d.pause();
+    showScreen('result', 'landing');
+    if (window.__globe) window.__globe.resume();
+    // Erst nach Abschluss der Screen-Transition scrollen — ein smooth-Scroll
+    // währenddessen wird vom Browser abgebrochen.
+    setTimeout(() => {
+        document.getElementById('about').scrollIntoView();
+    }, 450);
+}
+
+// ── Mobile sidebar ──
+function toggleMobileSide() {
+    mobileSideOpen = !mobileSideOpen;
+    document.getElementById('sidebar').classList.toggle('open', mobileSideOpen);
+}
+
+// ── Parteien: Legende + Info-Karte ──
+function renderPartyLegend() {
+    const legend = document.getElementById('partyLegend');
+    legend.innerHTML = '';
+    window.PARTIES.forEach(p => {
+        const item = document.createElement('div');
+        item.className = 'pl-item';
+        item.innerHTML = `<span class="pl-dot" style="background:${p.color}"></span>${p.name}`;
+        item.onclick = () => showPartyCard(p.name);
+        legend.appendChild(item);
+    });
+}
+
+function showPartyCard(name) {
+    const p = window.PARTIES.find(x => x.name === name);
+    const b = window.PARTY_BLURBS[name];
+    if (!p || !b) return;
+    const card = document.getElementById('partyCard');
+    const fmt = (v) => (v > 0 ? '+' : '') + v;
+    card.innerHTML = `
+        <span class="pc-close" onclick="document.getElementById('partyCard').classList.remove('show')">×</span>
+        <div class="pc-lab">Partei</div>
+        <h4><span class="pc-dot" style="background:${p.color}"></span>${p.name}</h4>
+        <div class="pc-axis"><div class="pc-top"><span>↔ Handel</span><b>${fmt(p.trade)}</b></div><div class="pc-exp">${b.trade}</div></div>
+        <div class="pc-axis"><div class="pc-top"><span>↕ Wirtschaft</span><b>${fmt(p.economy)}</b></div><div class="pc-exp">${b.economy}</div></div>
+        <div class="pc-axis"><div class="pc-top"><span>◈ Governance</span><b>${fmt(p.governance)}</b></div><div class="pc-exp">${b.governance}</div></div>`;
+    card.classList.add('show');
+}
+window.renderPartyLegend = renderPartyLegend;
+window.showPartyCard = showPartyCard;
+</script>
+
+<!-- ══════════════════ GLOBE (Three.js) ══════════════════ -->
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+}}
+</script>
+
+<script type="module">
+import * as THREE from 'three';
+
+const canvas = document.getElementById('globe-canvas');
+const landing = document.getElementById('landing');
+
+// Graceful exit if WebGL is unavailable (detect on a throwaway canvas so we
+// don't lock the real canvas's context attributes before the renderer claims it).
+let supported = false;
+try {
+    const probe = document.createElement('canvas');
+    supported = !!(window.WebGLRenderingContext && (probe.getContext('webgl2') || probe.getContext('webgl')));
+} catch (e) {}
+if (!supported) {
+    canvas.classList.add('globe-off');
+} else {
+    boot();
+}
+
+function boot() {
+    const TEX = location.protocol === 'file:'
+        ? 'https://threejs.org/examples/textures/planets/'  // file://: CDN (CORS-sauber)
+        : 'assets/textures/';                                // http://: lokal & offline-fähig
+    const R = 1; // globe radius
+
+    const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setSize(window.innerWidth, window.innerHeight);
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(38, window.innerWidth / window.innerHeight, 0.1, 100);
+    camera.position.set(0, 0, 3.7);
+
+    // ── Lights (a "sun" + soft fill so the dark side isn't pure black) ──
+    const sun = new THREE.DirectionalLight(0xfff4e6, 1.45);
+    sun.position.set(-4, 2.2, 3.5);
+    scene.add(sun);
+    scene.add(new THREE.AmbientLight(0x2a2f55, 0.55));
+
+    // ── Earth + clouds live in a group that we rotate ──
+    const globe = new THREE.Group();
+    globe.rotation.z = 0.41; // ~23.5° axial tilt
+    scene.add(globe);
+
+    const loader = new THREE.TextureLoader();
+    loader.setCrossOrigin('anonymous');
+    const load = (file) => loader.load(TEX + file, undefined, undefined,
+        () => console.warn('globe texture failed:', file));
+
+    const earthMat = new THREE.MeshPhongMaterial({
+        specularMap: load('earth_specular_2048.jpg'),
+        normalMap: load('earth_normal_2048.jpg'),
+        normalScale: new THREE.Vector2(0.85, 0.85),
+        specular: new THREE.Color(0x2b3a67),
+        shininess: 15,
+    });
+    // Color map gets its own error handler: if it never loads, tint the sphere
+    // a dark ocean blue instead of leaving it flat white.
+    earthMat.map = loader.load(TEX + 'earth_atmos_2048.jpg', undefined, undefined, () => {
+        earthMat.color.setHex(0x14222f);
+        earthMat.needsUpdate = true;
+    });
+    const earth = new THREE.Mesh(new THREE.SphereGeometry(R, 72, 72), earthMat);
+    globe.add(earth);
+
+    const cloudMat = new THREE.MeshPhongMaterial({
+        map: load('earth_clouds_1024.png'),
+        transparent: true, opacity: 0.38, depthWrite: false,
+    });
+    const clouds = new THREE.Mesh(new THREE.SphereGeometry(R * 1.012, 64, 64), cloudMat);
+    globe.add(clouds);
+
+    // ── Atmospheric fresnel glow (the blue "Google Earth" halo) ──
+    const glowMat = new THREE.ShaderMaterial({
+        uniforms: {
+            glowColor: { value: new THREE.Color(0x4a7fa8) },
+            intensity: { value: 0.75 },
+        },
+        vertexShader: `
+            varying vec3 vNormal;
+            void main() {
+                vNormal = normalize(normalMatrix * normal);
+                gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+            }`,
+        fragmentShader: `
+            varying vec3 vNormal;
+            uniform vec3 glowColor;
+            uniform float intensity;
+            void main() {
+                float i = pow(0.72 - dot(vNormal, vec3(0.0, 0.0, 1.0)), 3.2);
+                gl_FragColor = vec4(glowColor, 1.0) * i * intensity;
+            }`,
+        side: THREE.BackSide,
+        blending: THREE.AdditiveBlending,
+        transparent: true,
+        depthWrite: false,
+    });
+    const atmosphere = new THREE.Mesh(new THREE.SphereGeometry(R * 1.22, 64, 64), glowMat);
+    scene.add(atmosphere);
+
+    // ── Starfield ──
+    const starGeo = new THREE.BufferGeometry();
+    const starCount = 1400;
+    const starPos = new Float32Array(starCount * 3);
+    for (let i = 0; i < starCount; i++) {
+        const v = new THREE.Vector3().randomDirection().multiplyScalar(18 + Math.random() * 30);
+        starPos.set([v.x, v.y, v.z], i * 3);
+    }
+    starGeo.setAttribute('position', new THREE.BufferAttribute(starPos, 3));
+    const stars = new THREE.Points(starGeo, new THREE.PointsMaterial({
+        color: 0x9fb3c4, size: 0.06, sizeAttenuation: true, transparent: true, opacity: 0.7,
+    }));
+    scene.add(stars);
+
+    // ── Trade hubs (lat, lon) ──
+    function latLonToVec3(lat, lon, radius) {
+        const phi = (90 - lat) * Math.PI / 180;
+        const theta = (lon + 180) * Math.PI / 180;
+        return new THREE.Vector3(
+            -radius * Math.sin(phi) * Math.cos(theta),
+             radius * Math.cos(phi),
+             radius * Math.sin(phi) * Math.sin(theta)
+        );
+    }
+    const hubs = {
+        shanghai:  [31.2,  121.5], singapore: [1.35, 103.8], rotterdam: [51.9,   4.5],
+        newyork:   [40.7,  -74.0], la:        [34.0, -118.2], dubai:     [25.2,  55.3],
+        hamburg:   [53.5,    9.9], saopaulo:  [-23.5, -46.6], tokyo:     [35.7, 139.7],
+        mumbai:    [19.1,   72.9], capetown:  [-33.9,  18.4], sydney:    [-33.9, 151.2],
+    };
+    const routes = [
+        ['shanghai','rotterdam'], ['shanghai','la'], ['singapore','dubai'],
+        ['dubai','rotterdam'], ['newyork','hamburg'], ['rotterdam','newyork'],
+        ['tokyo','la'], ['mumbai','singapore'], ['saopaulo','rotterdam'],
+        ['shanghai','singapore'], ['hamburg','newyork'], ['capetown','mumbai'],
+        ['sydney','singapore'], ['la','tokyo'], ['dubai','mumbai'],
+    ];
+    const arcColors = [0x4db6ac, 0xd9a441, 0x7f9cb5, 0x6fc7bd, 0x9fb3c4];
+
+    // Glow sprite texture for the travelling pulses.
+    function glowTexture() {
+        const c = document.createElement('canvas');
+        c.width = c.height = 64;
+        const g = c.getContext('2d').createRadialGradient(32, 32, 0, 32, 32, 32);
+        g.addColorStop(0, 'rgba(255,255,255,1)');
+        g.addColorStop(0.25, 'rgba(255,255,255,0.85)');
+        g.addColorStop(1, 'rgba(255,255,255,0)');
+        const ctx = c.getContext('2d');
+        ctx.fillStyle = g;
+        ctx.fillRect(0, 0, 64, 64);
+        return new THREE.CanvasTexture(c);
+    }
+    const pulseTex = glowTexture();
+
+    const travellers = [];
+    routes.forEach((pair, idx) => {
+        const a = latLonToVec3(...hubs[pair[0]], R);
+        const b = latLonToVec3(...hubs[pair[1]], R);
+        const dist = a.distanceTo(b);
+        const mid = a.clone().add(b).multiplyScalar(0.5)
+            .normalize().multiplyScalar(R + 0.18 + dist * 0.32);
+        const curve = new THREE.QuadraticBezierCurve3(a, mid, b);
+        const color = arcColors[idx % arcColors.length];
+
+        // Arc tube
+        const tube = new THREE.Mesh(
+            new THREE.TubeGeometry(curve, 64, 0.0045, 8, false),
+            new THREE.MeshBasicMaterial({
+                color, transparent: true, opacity: 0.5,
+                blending: THREE.AdditiveBlending, depthWrite: false,
+            })
+        );
+        globe.add(tube);
+
+        // Endpoint markers
+        [a, b].forEach((p) => {
+            const dot = new THREE.Mesh(
+                new THREE.SphereGeometry(0.012, 12, 12),
+                new THREE.MeshBasicMaterial({ color, transparent: true, opacity: 0.9 })
+            );
+            dot.position.copy(p);
+            globe.add(dot);
+        });
+
+        // Travelling pulse
+        const sprite = new THREE.Sprite(new THREE.SpriteMaterial({
+            map: pulseTex, color, transparent: true,
+            blending: THREE.AdditiveBlending, depthWrite: false, opacity: 0.95,
+        }));
+        sprite.scale.setScalar(0.085);
+        globe.add(sprite);
+        travellers.push({ curve, sprite, speed: 0.06 + Math.random() * 0.05, offset: Math.random() });
+    });
+
+    // ── Scroll → progress mapping ──
+    let scrollProg = 0;
+    function updateScroll() {
+        const max = landing.scrollHeight - landing.clientHeight;
+        scrollProg = max > 0 ? Math.min(1, landing.scrollTop / max) : 0;
+
+        // Reveal the original landing content near the end of the scroll.
+        const wrap = document.querySelector('.landing-wrap');
+        if (wrap) wrap.classList.toggle('revealed', scrollProg > 0.42);
+
+        // Fade the hero intro out as the globe zooms in.
+        const sticky = document.querySelector('.hero-sticky');
+        if (sticky) {
+            sticky.style.opacity = Math.max(0, 1 - scrollProg * 1.9).toFixed(3);
+            const cue = sticky.querySelector('.scroll-cue');
+            if (cue) cue.style.opacity = Math.max(0, 1 - scrollProg * 6).toFixed(3);
+        }
+    }
+    landing.addEventListener('scroll', updateScroll, { passive: true });
+    updateScroll();
+
+    // ── Render loop ──
+    const easeInOut = (t) => t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+    let curRotY = 0, curZoom = camera.position.z, running = true;
+    const clock = new THREE.Clock();
+
+    function tick() {
+        if (!running) return;
+        const dt = clock.getDelta();
+        const t = clock.elapsedTime;
+
+        // Idle spin + scroll-driven spin (scroll dominates).
+        const targetRotY = t * 0.05 + scrollProg * Math.PI * 1.6;
+        curRotY += (targetRotY - curRotY) * Math.min(1, dt * 4);
+        globe.rotation.y = curRotY;
+        clouds.rotation.y += dt * 0.018; // clouds drift a touch faster
+
+        // Camera eases closer as you scroll.
+        const targetZoom = 3.7 - easeInOut(scrollProg) * 1.25;
+        curZoom += (targetZoom - curZoom) * Math.min(1, dt * 3);
+        camera.position.z = curZoom;
+
+        glowMat.uniforms.intensity.value = 0.75 + scrollProg * 0.45;
+        stars.rotation.y += dt * 0.004;
+
+        // Travelling shipping/flight pulses.
+        for (const tr of travellers) {
+            const p = (t * tr.speed + tr.offset) % 1;
+            tr.curve.getPointAt(p, tr.sprite.position);
+            tr.sprite.material.opacity = 0.55 + 0.45 * Math.sin(p * Math.PI);
+        }
+
+        renderer.render(scene, camera);
+        requestAnimationFrame(tick);
+    }
+    tick();
+
+    // ── Resize ──
+    window.addEventListener('resize', () => {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        updateScroll();
+    });
+
+    // ── Pause/resume hooks used by the quiz flow ──
+    window.__globe = {
+        pause() {
+            running = false;
+            canvas.classList.add('globe-off');
+        },
+        resume() {
+            canvas.classList.remove('globe-off');
+            if (!running) { running = true; clock.getDelta(); tick(); }
+            updateScroll();
+        },
+    };
+}
+</script>
+<script type="module">
+// js/compass3d.js — interaktiver 3D-Kompass im Ergebnis-Screen.
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { CSS2DRenderer, CSS2DObject } from 'three/addons/renderers/CSS2DRenderer.js';
+
+const AXIS_COLORS = { trade: 0x4db6ac, economy: 0xd9a441, governance: 0x7f9cb5 };
+const S = 1.6;            // halbe Kantenlänge des Wertewürfels (−1..1 ↔ −100..+100)
+const to01 = (v) => v / 100;   // Score −100..+100 → −1..1
+
+let renderer, labelRenderer, scene, camera, controls, you, halo, raf, running = false, t = 0;
+const pickables = [];
+
+function webglOK() {
+  try { const c = document.createElement('canvas');
+    return !!(window.WebGLRenderingContext && (c.getContext('webgl2') || c.getContext('webgl'))); }
+  catch (e) { return false; }
+}
+
+function mkLabel(text, cls, x, y, z, parent) {
+  const d = document.createElement('div'); d.className = 'c3d-lbl ' + cls; d.textContent = text;
+  const o = new CSS2DObject(d); o.position.set(x, y, z);
+  (parent || scene).add(o); return o;
+}
+
+function init() {
+  const canvas = document.getElementById('compass3d');
+  const wrap = document.getElementById('compass3d-wrap');
+  const W = wrap.clientWidth, H = wrap.clientHeight;
+
+  scene = new THREE.Scene();
+  scene.fog = new THREE.FogExp2(0x0c1420, 0.05);
+  camera = new THREE.PerspectiveCamera(50, W / H, 0.1, 100);
+  camera.position.set(3.4, 2.4, 4.2);
+
+  renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+  renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+  renderer.setSize(W, H);
+
+  labelRenderer = new CSS2DRenderer();
+  labelRenderer.setSize(W, H);
+  labelRenderer.domElement.style.cssText = 'position:absolute;inset:0;pointer-events:none;z-index:3';
+  wrap.appendChild(labelRenderer.domElement);
+
+  controls = new OrbitControls(camera, renderer.domElement);
+  controls.enableDamping = true; controls.dampingFactor = 0.08;
+  controls.minDistance = 2.5; controls.maxDistance = 9;
+  controls.autoRotate = true; controls.autoRotateSpeed = 0.5;
+  canvas.addEventListener('pointerdown', () => controls.autoRotate = false);
+
+  scene.add(new THREE.AmbientLight(0xffffff, 0.8));
+  const key = new THREE.PointLight(0x9fb3c4, 60, 30); key.position.set(4, 6, 4); scene.add(key);
+
+  // Wertewürfel
+  scene.add(new THREE.LineSegments(
+    new THREE.EdgesGeometry(new THREE.BoxGeometry(S * 2, S * 2, S * 2)),
+    new THREE.LineBasicMaterial({ color: 0x4db6ac, transparent: true, opacity: 0.16 })));
+  const grid = new THREE.GridHelper(S * 2, 8, 0x4db6ac, 0x4db6ac);
+  grid.material.transparent = true; grid.material.opacity = 0.08; grid.position.y = -S; scene.add(grid);
+
+  // Achsen + Pol-Labels (X=Handel, Y=Wirtschaft, Z=Governance)
+  const axis = (dir, color) => scene.add(new THREE.Line(
+    new THREE.BufferGeometry().setFromPoints([dir.clone().multiplyScalar(-S), dir.clone().multiplyScalar(S)]),
+    new THREE.LineBasicMaterial({ color, transparent: true, opacity: 0.55 })));
+  axis(new THREE.Vector3(1, 0, 0), AXIS_COLORS.trade);
+  axis(new THREE.Vector3(0, 1, 0), AXIS_COLORS.economy);
+  axis(new THREE.Vector3(0, 0, 1), AXIS_COLORS.governance);
+  const P = S + 0.22;
+  mkLabel('Freihandel', 'pole', P, 0, 0); mkLabel('Protektionismus', 'pole', -P, 0, 0);
+  mkLabel('Wachstum', 'pole', 0, P, 0);   mkLabel('Postwachstum', 'pole', 0, -P, 0);
+  mkLabel('Globalismus', 'pole', 0, 0, P); mkLabel('Nat. Souveränität', 'pole', 0, 0, -P);
+
+  window.addEventListener('resize', onResize);
+  window.addEventListener('orientationchange', onResize);
+
+  // Klick → Parteikarte (nutzt vorhandene showPartyCard)
+  const ray = new THREE.Raycaster(), m = new THREE.Vector2();
+  renderer.domElement.addEventListener('click', (e) => {
+    const r = renderer.domElement.getBoundingClientRect();
+    m.set((e.clientX - r.left) / r.width * 2 - 1, -((e.clientY - r.top) / r.height) * 2 + 1);
+    ray.setFromCamera(m, camera);
+    const hit = ray.intersectObjects(pickables)[0];
+    if (hit && window.showPartyCard) window.showPartyCard(hit.object.userData.name);
+  });
+}
+
+function dot(x, y, z, color, r, glow) {
+  const m = new THREE.Mesh(new THREE.SphereGeometry(r, 24, 24),
+    new THREE.MeshStandardMaterial({ color, emissive: color, emissiveIntensity: glow ? 1.1 : 0.35, roughness: 0.4 }));
+  m.position.set(x * S, y * S, z * S); scene.add(m); return m;
+}
+
+function buildPoints(scores) {
+  // alte Punkte/Labels entfernen (inkl. GPU-Ressourcen freigeben)
+  const disposeMesh = (m) => {
+    m.children.slice().forEach(c => { m.remove(c); if (c.isMesh) disposeMesh(c); });
+    if (m.geometry) m.geometry.dispose();
+    if (m.material) m.material.dispose();
+    scene.remove(m);
+  };
+  pickables.forEach(disposeMesh);
+  pickables.length = 0;
+  if (you) { disposeMesh(you); you = null; halo = null; }
+
+  window.PARTIES.forEach(p => {
+    const m = dot(to01(p.trade), to01(p.economy), to01(p.governance), Number('0x' + p.color.slice(1)), 0.07, false);
+    m.userData = { name: p.name };
+    pickables.push(m);
+    const d = document.createElement('div'); d.className = 'c3d-lbl'; d.textContent = p.name;
+    const o = new CSS2DObject(d); o.position.set(0, 0.13, 0); m.add(o);
+  });
+
+  you = dot(to01(scores.trade), to01(scores.economy), to01(scores.governance), 0x4db6ac, 0.11, true);
+  halo = new THREE.Mesh(new THREE.SphereGeometry(0.2, 24, 24),
+    new THREE.MeshBasicMaterial({ color: 0x4db6ac, transparent: true, opacity: 0.22 }));
+  you.add(halo);
+  mkLabel('● DU', 'you', 0, 0.2, 0, you);
+}
+
+function onResize() {
+  if (!renderer) return;
+  const wrap = document.getElementById('compass3d-wrap');
+  const W = wrap.clientWidth, H = wrap.clientHeight;
+  camera.aspect = W / H; camera.updateProjectionMatrix();
+  renderer.setSize(W, H); labelRenderer.setSize(W, H);
+}
+
+function loop() {
+  if (!running) return;
+  raf = requestAnimationFrame(loop);
+  t += 0.03;
+  if (halo) halo.scale.setScalar(1 + Math.sin(t) * 0.12);
+  controls.update();
+  renderer.render(scene, camera);
+  labelRenderer.render(scene, camera);
+}
+
+window.__compass3d = {
+  render(scores) {
+    const wrap = document.getElementById('compass3d-wrap');
+    if (!webglOK()) { wrap.style.display = 'none'; return; }   // Fallback: Balken bleiben sichtbar
+    if (!renderer) init();
+    controls.autoRotate = true;   // neue Auswertung: wieder sanft drehen bis zum ersten Eingriff
+    buildPoints(scores);
+    onResize();
+    if (!running) { running = true; loop(); }
+  },
+  pause() { running = false; if (raf) cancelAnimationFrame(raf); },
+  resume() { if (renderer && !running) { running = true; loop(); } },
+};
+
+</script>
+</body>
+</html>
