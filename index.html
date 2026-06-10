@@ -29,6 +29,11 @@
                 Scrolle, um die Welt zu drehen
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
             </div>
+            <!-- Direkter Start auf Mobilgeräten (kein Scroll-Jacking nötig) -->
+            <button class="btn-primary hero-cta" onclick="startQuiz()">
+                Test starten
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
         </div>
     </section>
 
@@ -549,66 +554,32 @@ document.addEventListener('click', () => {
 });
 
 // ── Simplify toggle ──
+// Tauscht nur den Fragetext gegen die einfache Variante. Die Erklärung
+// in der Seitenleiste (Zustimmung/Ablehnung/Kontext) bleibt immer erhalten.
+const SIMPLIFY_ICON = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>`;
+
 function toggleSimplify() {
     simplified = !simplified;
-    const btn       = document.getElementById('simplifyBtn');
-    const sideTitle = document.getElementById('sideTitle');
-    const sideBody  = document.getElementById('sideBody');
-    const sideIcon  = document.getElementById('sideIcon');
-    const qText     = document.getElementById('qText');
+    const btn   = document.getElementById('simplifyBtn');
+    const qText = document.getElementById('qText');
+    const q     = QUESTIONS[cur];
 
     btn.classList.toggle('active', simplified);
+    btn.innerHTML = SIMPLIFY_ICON + (simplified ? ' Originaltext' : ' Vereinfachen');
 
-    if (simplified) {
-        btn.innerHTML = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg> Vereinfacht`;
-
-        // Replace question text with simple version
-        qText.style.transition = 'opacity .25s ease';
-        qText.style.opacity = '0';
-        setTimeout(() => {
-            qText.textContent = window._currentSimple || '';
+    // Nur den Fragetext überblenden – die Seitenleiste bleibt stehen.
+    qText.style.transition = 'opacity .25s ease';
+    qText.style.opacity = '0';
+    setTimeout(() => {
+        if (simplified) {
+            qText.textContent = q.simple || q.text;
             qText.style.color = '#ddd6fe';
-            qText.style.opacity = '1';
-        }, 200);
-
-        sideTitle.textContent = 'Einfache Erklärung';
-        sideIcon.textContent  = '💡';
-        sideBody.className    = 'sidebar-body simple';
-        sideBody.textContent  = window._currentSimple || '';
-    } else {
-        btn.innerHTML = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg> Vereinfachen`;
-
-        // Fade out, restore full question text with tooltips
-        qText.style.transition = 'opacity .25s ease';
-        qText.style.opacity = '0';
-        setTimeout(() => {
-            const q = QUESTIONS[cur];
+        } else {
             qText.innerHTML = processText(q.text, q.terms);
             qText.style.color = '';
-            qText.style.opacity = '1';
-        }, 200);
-
-        // Restore full sidebar explanation
-        const q = QUESTIONS[cur];
-        sideIcon.textContent  = '📖';
-        sideTitle.textContent = 'Zur Frage';
-        sideBody.className    = 'sidebar-body';
-        sideBody.innerHTML    = `
-            <div class="expl-section">
-                <div class="expl-label agree-lbl"><span class="expl-dot agree"></span>Zustimmung bedeutet</div>
-                <div class="expl-text">${q.agree}</div>
-            </div>
-            <div class="expl-divider"></div>
-            <div class="expl-section">
-                <div class="expl-label disagree-lbl"><span class="expl-dot disagree"></span>Ablehnung bedeutet</div>
-                <div class="expl-text">${q.disagree}</div>
-            </div>
-            <div class="expl-divider"></div>
-            <div class="expl-section">
-                <div class="expl-label context-lbl"><span class="expl-dot context"></span>Kontext</div>
-                <div class="expl-text">${q.context}</div>
-            </div>`;
-    }
+        }
+        qText.style.opacity = '1';
+    }, 200);
 }
 
 // ── Navigation ──

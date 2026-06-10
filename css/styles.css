@@ -92,6 +92,7 @@ body::after {
 .hero-stage {
     position: relative;
     height: 240vh;            /* Scroll-Distanz, die den Globus antreibt */
+    flex-shrink: 0;           /* sonst staucht der Flex-Container die 240vh auf 100vh */
 }
 .hero-sticky {
     position: sticky; top: 0;
@@ -146,6 +147,14 @@ body::after {
     text-transform: uppercase; color: var(--text-dim);
 }
 .scroll-cue svg { animation: cueBounce 1.8s ease-in-out infinite; }
+
+/* Mobile-Start-Button im Hero – auf Desktop ausgeblendet (dort führt Scrollen zum Start).
+   Selektor mit .hero-sticky, damit er .btn-primary (später deklariert) sicher übersteuert. */
+.hero-sticky .hero-cta {
+    display: none;
+    margin-top: .4rem;
+    pointer-events: auto;     /* Hero-Sticky ist pointer-events:none */
+}
 @keyframes cueBounce {
     0%, 100% { transform: translateY(0); opacity: .5; }
     50%      { transform: translateY(7px); opacity: 1; }
@@ -789,6 +798,15 @@ body::after {
    RESPONSIVE
 ══════════════════════════════════════ */
 @media (max-width: 768px) {
+    /* Kein Scroll-Jacking auf dem Handy: Hero füllt einen Screen, der
+       Start-Button ist sofort sichtbar, die Landing-Inhalte sind direkt erreichbar. */
+    #landing { -webkit-overflow-scrolling: touch; }
+    .hero-stage { height: 100vh; }
+    .hero-sticky { gap: 1rem; }
+    .scroll-cue { display: none; }
+    .hero-sticky .hero-cta { display: inline-flex; }
+    .landing-wrap { opacity: 1; transform: none; }
+
     .quiz-grid {
         grid-template-columns: 1fr;
         padding: 4rem 1.25rem 6rem;

@@ -52,16 +52,16 @@ window.QUESTIONS = [
     agree:'Du vertraust darauf, dass Spezialisierung und freier Tausch für alle Handelspartner Wohlstand schafft.',
     disagree:'Du bezweifelst, dass Handelsgewinne alle Teile der Gesellschaft erreichen. Bestimmte Regionen und Berufsgruppen verlieren.',
     context:'Ricardos Theorie ist das wichtigste Argument für Freihandel. Studien (Autor et al., 2013) zeigen jedoch, dass der „China-Schock" ganze US-Industrieregionen deindustrialisiert hat.',
-    simple:'Wenn jedes Land das herstellt, was es am besten kann, und dann tauscht – gewinnen alle? Stimmt das immer?',
+    simple:'Jedes Land stellt das her, was es am besten kann, und tauscht es. Profitieren davon wirklich alle? Stimmt das immer?',
     axis:'trade', pol:+1 },
 
   { topic:'⇄ Freihandel & Wohlstand', topicClass:'pill-trade', sideSub:'Freihandel & Wohlstand',
-    text:'Die Gewinne des [[Freihandels]] kommen vor allem Großkonzernen zugute – nicht der breiten Bevölkerung.',
+    text:'Die Gewinne des [[Freihandels]] kommen vor allem Großkonzernen zugute, nicht der breiten Bevölkerung.',
     terms:{ 'Freihandels':'Austausch von Waren und Dienstleistungen zwischen Ländern ohne staatliche Einschränkungen wie Zölle oder Quoten.' },
     agree:'Du siehst Freihandel kritisch: Gewinne fließen vor allem zu Kapitaleignern und Unternehmen, Arbeitnehmer in betroffenen Sektoren verlieren.',
     disagree:'Du glaubst, dass Freihandel durch günstigere Preise und mehr Auswahl letztlich allen Konsumenten und der Gesamtwirtschaft nützt.',
     context:'Zwar sinken Preise für Konsumgüter, doch in bestimmten Industrien steigt die Ungleichheit. Globalisierungsgewinne werden ungleich verteilt.',
-    simple:'Verdienen an freiem Handel vor allem Unternehmen und Reiche – während normale Arbeitnehmer leer ausgehen?',
+    simple:'Verdienen am freien Handel vor allem Unternehmen und Reiche, während normale Arbeitnehmer leer ausgehen?',
     axis:'trade', pol:-1 },
 
   { topic:'⇄ Freihandel & Wohlstand', topicClass:'pill-trade', sideSub:'Freihandel & Wohlstand',
@@ -70,11 +70,11 @@ window.QUESTIONS = [
     agree:'Du glaubst, dass Handelshemmnisse ineffizient sind: Sie erhöhen Preise für Verbraucher und schützen unproduktive Sektoren auf Kosten der Allgemeinheit.',
     disagree:'Du siehst Schutzzölle als legitimes Mittel, um strategische Industrien und Arbeitsplätze zu erhalten – selbst wenn das kurzfristig Kosten verursacht.',
     context:'Ökonomen sind sich weitgehend einig, dass Protektionismus die Gesamteffizienz senkt. Politisch bleibt er attraktiv, weil seine Kosten diffus, seine Vorteile aber konzentriert sind.',
-    simple:'Wenn ein Land seine Produkte schützt, indem es ausländische Waren teurer macht – schadet es damit am Ende sich selbst?',
+    simple:'Wenn ein Land seine Produkte schützt, indem es ausländische Waren teurer macht: Schadet es damit am Ende sich selbst?',
     axis:'trade', pol:+1 },
 
   { topic:'⇄ Freihandel & Wohlstand', topicClass:'pill-trade', sideSub:'Freihandel & Wohlstand',
-    text:'Reiche Länder sollten ärmeren erlauben, eigene Industrien zu schützen – auch wenn das den Freihandel einschränkt.',
+    text:'Reiche Länder sollten ärmeren erlauben, eigene Industrien zu schützen, auch wenn das den Freihandel einschränkt.',
     terms:{},
     agree:'Du glaubst an eine asymmetrische Handelsordnung: Entwicklungsländer brauchen andere Regeln als Industrieländer, um wirtschaftlich aufzuholen.',
     disagree:'Du befürwortest einheitliche Freihandelsregeln für alle – Sonderregeln verzerren den Markt und helfen Entwicklungsländern langfristig nicht.',
@@ -88,7 +88,7 @@ window.QUESTIONS = [
     agree:'Du bevorzugst vollständigen globalen Freihandel – regionale Blöcke sind nur ein Kompromiss, der Außenstehende benachteiligt.',
     disagree:'Du siehst regionale Abkommen als pragmatischen Weg: leichter umzusetzen, kulturell kohärenter und für beteiligte Länder vorteilhafter.',
     context:'Regionalismus vs. Multilateralismus ist ein zentraler Streitpunkt. Die WTO fördert multilaterale Regeln, während Freihandelsabkommen wie CETA oder RCEP regional agieren.',
-    simple:'Ist es besser, wenn alle Länder weltweit frei handeln – oder wenn Ländergruppen untereinander eigene Deals schließen?',
+    simple:'Ist es besser, wenn alle Länder weltweit frei handeln, oder wenn Ländergruppen untereinander eigene Deals schließen?',
     axis:'trade', pol:+1 },
 
   // ── Thema 2: US-Protektionismus ──
@@ -98,7 +98,7 @@ window.QUESTIONS = [
     agree:'Du glaubst, dass der Handelskrieg globale Lieferketten stört und alle Seiten schlechter stellt – auch die USA selbst.',
     disagree:'Du siehst die Zölle als notwendige Reaktion auf Chinas staatliche Subventionen und als Hebel zur Durchsetzung fairer Handelsbedingungen.',
     context:'Die USA haben seit 2018 Zölle auf chinesische Güter im Wert von Hunderten Milliarden Dollar eingeführt. Ökonomen streiten über die Nettoeffekte auf Preise, Jobs und Lieferketten.',
-    simple:'Die USA erheben Strafabgaben auf chinesische Waren. Ist das gut für die Weltwirtschaft – oder schadet es am Ende allen?',
+    simple:'Die USA erheben Strafabgaben auf chinesische Waren. Ist das gut für die Weltwirtschaft, oder schadet es am Ende allen?',
     axis:'trade', pol:+1 },
 
   { topic:'⇄ US-Protektionismus', topicClass:'pill-trade', sideSub:'US-amerikanischer Protektionismus',
@@ -107,7 +107,7 @@ window.QUESTIONS = [
     agree:'Du glaubst, dass staatlicher Schutz heimische Industrien und Jobs erhält – ein legitimes wirtschaftspolitisches Ziel.',
     disagree:'Du glaubst, dass Schutzzölle ineffiziente Industrien künstlich am Leben halten und langfristig Wettbewerbsfähigkeit sowie Wachstum bremsen.',
     context:'Kurzfristig können Zölle bestimmte Jobs erhalten. Langfristig zeigt die Forschung oft negative Effekte: höhere Preise für Verbraucher, Vergeltungsmaßnahmen und sinkende Produktivität.',
-    simple:'Wenn ein Land seine Fabriken vor billiger Auslandskonkurrenz schützt – bleiben dadurch wirklich langfristig mehr Arbeitsplätze erhalten?',
+    simple:'Wenn ein Land seine Fabriken vor billiger Auslandskonkurrenz schützt: Bleiben dadurch wirklich langfristig mehr Arbeitsplätze erhalten?',
     axis:'trade', pol:-1 },
 
   { topic:'⇄ US-Protektionismus', topicClass:'pill-trade', sideSub:'US-amerikanischer Protektionismus',
@@ -116,16 +116,16 @@ window.QUESTIONS = [
     agree:'Du erkennst, dass Großmächte-Konflikte systemische Risiken erzeugen, die kleine Länder ohne Verhandlungsmacht besonders hart treffen.',
     disagree:'Du glaubst, dass kleine Länder als neutrale Dritte auch profitieren können – etwa als alternative Lieferanten bei Lieferkettenverlagerungen.',
     context:'Der US-China-Handelskrieg hat Staaten wie Vietnam, Mexiko oder Deutschland mittelbar beeinflusst – teils als Profiteure (Verlagerung), teils als Leidtragende (Nachfragerückgang).',
-    simple:'Wenn die USA und China sich im Handelsstreit bekriegen – leiden dann auch kleinere Länder wie Deutschland darunter?',
+    simple:'Wenn die USA und China sich im Handelsstreit bekriegen: Leiden dann auch kleinere Länder wie Deutschland darunter?',
     axis:'trade', pol:+1 }, // soft
 
   { topic:'⇄ US-Protektionismus', topicClass:'pill-trade', sideSub:'US-amerikanischer Protektionismus',
-    text:'Ein Land hat das Recht, [[strategisch wichtige Industrien]] zu schützen – unabhängig von internationalen Handelsregeln.',
+    text:'Ein Land hat das Recht, [[strategisch wichtige Industrien]] zu schützen, unabhängig von internationalen Handelsregeln.',
     terms:{ 'strategisch wichtige Industrien':'Branchen, die als unverzichtbar für nationale Sicherheit oder Versorgung gelten – z.B. Rüstung, Energie, Halbleiter, Pharmazeutika.' },
     agree:'Du priorisierst nationale Souveränität und Sicherheit über internationale Handelsregeln. Staaten müssen kritische Kapazitäten selbst kontrollieren.',
     disagree:'Du glaubst, dass Ausnahmen für „strategische" Industrien leicht missbraucht werden und das internationale Handelssystem untergraben.',
     context:'Die COVID-Pandemie und der Ukraine-Krieg haben das Konzept strategischer Autonomie neu belebt. Die EU und USA investieren massiv in heimische Chipproduktion und Energieversorgung.',
-    simple:'Darf ein Land bestimmte Fabriken schützen, die für die nationale Sicherheit wichtig sind – auch wenn das gegen internationale Regeln verstößt?',
+    simple:'Darf ein Land bestimmte Fabriken schützen, die für die nationale Sicherheit wichtig sind, auch wenn das gegen internationale Regeln verstößt?',
     axis:'trade', pol:-1 },
 
   { topic:'⇄ US-Protektionismus', topicClass:'pill-trade', sideSub:'US-amerikanischer Protektionismus',
@@ -134,7 +134,7 @@ window.QUESTIONS = [
     agree:'Du siehst das internationale Handelssystem als heuchlerisch: Mächtige setzen Regeln durch, die sie selbst nicht einhalten.',
     disagree:'Du glaubst, dass auch mächtige Länder im Grundsatz im Rahmen der WTO-Regeln bleiben und diese respektieren.',
     context:'Die USA haben Strafzölle eingeführt, die die WTO für regelwidrig erklärt hat. Das Streitbeilegungssystem ist blockiert, weil die USA neue Richterposten verhindern.',
-    simple:'Die USA setzen Handelsregeln für andere durch – brechen diese Regeln aber selbst. Was sagt das über das internationale System?',
+    simple:'Die USA setzen Handelsregeln für andere durch, brechen sie aber selbst. Was sagt das über das internationale System?',
     axis:'trade', pol:-1 }, // soft
 
   // ── Thema 3: Wachstum & Wohlstand ──
@@ -162,7 +162,7 @@ window.QUESTIONS = [
     agree:'Du glaubst, dass Wachstum strukturell notwendig ist: Ohne es können Schulden, Sozialleistungen und Investitionen nicht finanziert werden.',
     disagree:'Du glaubst, dass Stagnation kein Krisensymptom sein muss – eine Wirtschaft kann stabil sein, wenn Ressourcen fair verteilt sind und Grundbedürfnisse gesichert werden.',
     context:'Japan erlebt seit den 1990ern niedrige Wachstumsraten ohne gesellschaftlichen Kollaps. Postwachstumsökonomen wie Tim Jackson argumentieren, dass Wohlstand ohne Wachstum möglich ist.',
-    simple:'Muss eine Wirtschaft immer wachsen – oder kann eine Gesellschaft auch ohne Wachstum stabil und zufrieden sein?',
+    simple:'Muss eine Wirtschaft immer wachsen, oder kann eine Gesellschaft auch ohne Wachstum stabil und zufrieden sein?',
     axis:'economy', pol:+1 },
 
   { topic:'↕ Wachstum & Wohlstand', topicClass:'pill-economy', sideSub:'Wachstum & Wohlstand',
@@ -171,11 +171,11 @@ window.QUESTIONS = [
     agree:'Du glaubst, dass weniger Konsum möglich ist, ohne Lebensqualität zu verlieren – wenn gesellschaftliche Prioritäten umgestellt werden (mehr Freizeit, weniger Statussymbole).',
     disagree:'Du siehst Degrowth als utopisch: Eine schrumpfende Wirtschaft bedeutet weniger Jobs, geringere Steuereinnahmen und Verteilungskonflikte.',
     context:'Degrowth-Ökonomen (Latouche, Kallis) argumentieren, dass ökologische Grenzen eine Wachstumsgesellschaft unmöglich machen. Kritiker: Das ist für arme Länder keine Option.',
-    simple:'Könnten wir weniger kaufen und produzieren – und trotzdem gut leben? Oder brauchen wir immer mehr?',
+    simple:'Könnten wir weniger kaufen und produzieren und trotzdem gut leben? Oder brauchen wir immer mehr?',
     axis:'economy', pol:-1 },
 
   { topic:'↕ Wachstum & Wohlstand', topicClass:'pill-economy', sideSub:'Wachstum & Wohlstand',
-    text:'Technologischer Fortschritt kann [[grünes Wachstum]] ermöglichen – Wirtschaft und Umwelt schließen sich nicht aus.',
+    text:'Technologischer Fortschritt kann [[grünes Wachstum]] ermöglichen. Wirtschaft und Umwelt schließen sich nicht aus.',
     terms:{ 'grünes Wachstum':'Wirtschaftswachstum, das gleichzeitig Ressourcenverbrauch und Emissionen senkt – durch technologische Effizienzsteigerungen. Ziel: Entkopplung von Wachstum und Umweltschäden.' },
     agree:'Du vertraust darauf, dass Innovation (erneuerbare Energien, Kreislaufwirtschaft) Wachstum und Klimaschutz vereinbar macht.',
     disagree:'Du bezweifelst, dass eine echte Entkopplung von Wachstum und Ressourcenverbrauch realisierbar ist – Rebound-Effekte fressen Effizienzgewinne oft auf.',
@@ -190,7 +190,7 @@ window.QUESTIONS = [
     agree:'Du glaubst, dass echter Klimaschutz wirtschaftliches Wachstum strukturell einschränkt – und dass Gesellschaften diese Entscheidung ehrlich treffen müssen.',
     disagree:'Du glaubst, dass kluge Klimapolitik auch Innovationen antreibt und langfristig wirtschaftliche Chancen schafft – der Übergang ist kostspielig, aber machbar.',
     context:'Studien von Stern zeigen: Die Kosten des Nicht-Handelns übersteigen die Kosten des Klimaschutzes. Dennoch sind Verteilungskonflikte (wer trägt die Last?) politisch schwer lösbar.',
-    simple:'Kann man gleichzeitig die Wirtschaft wachsen lassen UND das Klima schützen – oder muss man sich entscheiden?',
+    simple:'Kann man gleichzeitig die Wirtschaft wachsen lassen UND das Klima schützen, oder muss man sich entscheiden?',
     axis:'economy', pol:-1 },
 
   { topic:'↕ Ökonomie & Nachhaltigkeit', topicClass:'pill-economy', sideSub:'Ökonomie & Nachhaltigkeit',
@@ -199,7 +199,7 @@ window.QUESTIONS = [
     agree:'Du vertraust dem Marktmechanismus: Wenn Konsumenten Nachhaltigkeit wollen und Ressourcen knapper werden, reagieren Unternehmen mit Innovation.',
     disagree:'Du glaubst, dass Märkte versagen, wenn externe Kosten (z.B. CO₂) nicht im Preis enthalten sind – staatliche Regulierung ist deshalb unverzichtbar.',
     context:'Das Konzept der negativen Externalitäten ist in der Ökonomie anerkannt. CO₂-Bepreisung (Pigou-Steuer) gilt als Lösung – ist aber politisch umstritten.',
-    simple:'Werden Unternehmen von selbst umweltfreundlicher, wenn Kunden das wollen – oder braucht es dafür Gesetze?',
+    simple:'Werden Unternehmen von selbst umweltfreundlicher, wenn Kunden das wollen, oder braucht es dafür Gesetze?',
     axis:'economy', pol:+1 },
 
   { topic:'↕ Ökonomie & Nachhaltigkeit', topicClass:'pill-economy', sideSub:'Ökonomie & Nachhaltigkeit',
@@ -208,16 +208,16 @@ window.QUESTIONS = [
     agree:'Du priorisierst ökologische Grenzen über kurzfristige Beschäftigungsinteressen – langfristig ist Klimazerstörung wirtschaftlich ruinöser.',
     disagree:'Du glaubst, dass Umweltpolitik sozial verträglich gestaltet werden muss – Jobverluste in bestimmten Regionen sind politisch und moralisch nicht akzeptabel.',
     context:'Der „Just Transition"-Ansatz verbindet Klimapolitik mit sozialer Absicherung (z.B. Kohleausstieg mit Strukturfonds). Die Spannung zwischen Ökologie und Beschäftigung bleibt real.',
-    simple:'Wenn eine Fabrik aus Umweltgründen schließen muss und Menschen ihren Job verlieren – ist das trotzdem richtig?',
+    simple:'Wenn eine Fabrik aus Umweltgründen schließen muss und Menschen ihren Job verlieren: Ist das trotzdem richtig?',
     axis:'economy', pol:-1 },
 
   { topic:'↕ Ökonomie & Nachhaltigkeit', topicClass:'pill-economy', sideSub:'Ökonomie & Nachhaltigkeit',
-    text:'Unternehmen sollten gesetzlich verpflichtet werden, ihre [[CO₂-Emissionen]] zu reduzieren – auch wenn das ihre [[Wettbewerbsfähigkeit]] verschlechtert.',
+    text:'Unternehmen sollten gesetzlich verpflichtet werden, ihre [[CO₂-Emissionen]] zu reduzieren, auch wenn das ihre [[Wettbewerbsfähigkeit]] verschlechtert.',
     terms:{ 'CO₂-Emissionen':'Ausstoß von Kohlendioxid, dem wichtigsten Treibhausgas. Entsteht durch Verbrennung fossiler Brennstoffe in Industrie, Verkehr und Energieversorgung.', 'Wettbewerbsfähigkeit':'Fähigkeit eines Unternehmens, im internationalen Vergleich konkurrenzfähige Produkte und Dienstleistungen anzubieten.' },
     agree:'Du bevorzugst verbindliche Klimaregeln: Freiwilligkeit reicht nicht, und die Zusatzkosten sind notwendig für eine systemische Transformation.',
     disagree:'Du befürchtest, dass strenge Auflagen Unternehmen ins Ausland treiben und dort mehr emittieren – ohne globalen Klimaeffekt (Carbon Leakage).',
     context:'Die EU hat Emissionshandel (ETS) und das Carbon Border Adjustment Mechanism (CBAM) eingeführt, um Carbon Leakage zu verhindern.',
-    simple:'Sollen Unternehmen per Gesetz weniger CO₂ ausstoßen müssen – auch wenn ihre Produkte dadurch teurer werden?',
+    simple:'Sollen Unternehmen per Gesetz weniger CO₂ ausstoßen müssen, auch wenn ihre Produkte dadurch teurer werden?',
     axis:'economy', pol:-1 },
 
   { topic:'↕ Ökonomie & Nachhaltigkeit', topicClass:'pill-economy', sideSub:'Ökonomie & Nachhaltigkeit',
@@ -236,11 +236,11 @@ window.QUESTIONS = [
     agree:'Du siehst globale Handelsregeln als von Industrienationen gestaltetes System, das ihre Macht festigt und Entwicklungsländer strukturell benachteiligt.',
     disagree:'Du glaubst, dass Handelsabkommen auch armen Ländern Marktzugang und Investitionen bringen – und von diesen freiwillig ausgehandelt werden.',
     context:'Kritiker wie Ha-Joon Chang zeigen, dass reiche Länder armen die Mittel verweigern, mit denen sie selbst reich wurden: Industriepolitik, Schutzzölle, staatliche Förderung.',
-    simple:'Wenn ein reiches Land mit einem armen Handel treibt – wer hat dabei mehr Macht, die Regeln zu bestimmen?',
+    simple:'Wenn ein reiches Land mit einem armen Land Handel treibt: Wer hat dabei mehr Macht, die Regeln zu bestimmen?',
     axis:'governance', pol:-1 }, // soft
 
   { topic:'◈ Fairer Handel', topicClass:'pill-governance', sideSub:'Fairer Handel',
-    text:'Entwicklungsländer sollten ihre Industrien schützen dürfen – auch wenn das gegen internationale Handelsregeln verstößt.',
+    text:'Entwicklungsländer sollten ihre Industrien schützen dürfen, auch wenn das gegen internationale Handelsregeln verstößt.',
     terms:{},
     agree:'Du priorisierst wirtschaftliche Entwicklungsrechte über internationale Regeltreue. Arme Länder sollen die Instrumente nutzen dürfen, die reiche Länder historisch auch nutzten.',
     disagree:'Du glaubst, dass einheitliche Regeln wichtig sind – Ausnahmen untergraben das internationale Handelssystem und schaffen neue Ungleichheiten.',
@@ -254,7 +254,7 @@ window.QUESTIONS = [
     agree:'Du glaubst, dass faire Preise Kleinbauern stärken, Armut reduzieren und nachhaltige Produktionsbedingungen fördern.',
     disagree:'Du bezweifelst die Wirksamkeit: Fairtrade-Prämien erreichen nicht immer die Ärmsten, verzerren Märkte und sind kein systemischer Armutsansatz.',
     context:'Akademische Studien zeigen gemischte Ergebnisse: Prämien helfen Bauern, reichen aber oft nicht für einen echten Armutsausstieg.',
-    simple:'Wenn wir mehr für Kaffee zahlen, damit Bauern in armen Ländern faire Löhne bekommen – funktioniert das wirklich?',
+    simple:'Wenn wir mehr für Kaffee zahlen, damit Bauern in armen Ländern faire Löhne bekommen: Funktioniert das wirklich?',
     axis:'governance', pol:+1 }, // soft
 
   { topic:'◈ Fairer Handel', topicClass:'pill-governance', sideSub:'Fairer Handel',
@@ -272,7 +272,7 @@ window.QUESTIONS = [
     agree:'Du glaubst, dass Freihandel ohne Mindeststandards (Umwelt, Arbeit) zu einem „Race to the Bottom" führt – Länder erkaufen sich Vorteile durch Deregulierung.',
     disagree:'Du siehst Sozialstandards in Handelsabkommen als verdeckten Protektionismus: Reiche Länder schützen damit ihre teurere Produktion vor günstigerer Konkurrenz.',
     context:'„Race to the Bottom": Theorie, dass Länder Umwelt- und Sozialstandards senken, um Investoren anzuziehen. Empirisch für bestimmte Sektoren belegt, aber nicht universell.',
-    simple:'Wenn Länder miteinander handeln – sollte es dann gemeinsame Regeln geben, wie Arbeitnehmer behandelt werden müssen?',
+    simple:'Wenn Länder miteinander handeln: Sollte es gemeinsame Regeln geben, wie Arbeitnehmer behandelt werden müssen?',
     axis:'governance', pol:+1 },
 
   // ── Thema 6: WTO ──
@@ -291,7 +291,7 @@ window.QUESTIONS = [
     agree:'Du siehst die WTO als von Industrieländern gestaltetes System, das deren Exportinteressen (z.B. Schutz von Patenten, Öffnung fremder Märkte) bevorzugt.',
     disagree:'Du glaubst, dass die WTO durch das Konsensprinzip Entwicklungsländern theoretisch gleiche Stimme gibt – und ihnen Marktzugang verschafft.',
     context:'TRIPS (Patentschutzregeln in der WTO) wurde von Pharmafirmen aus Industrieländern gepusht und schränkt Entwicklungsländer bei der Produktion günstiger Generika ein.',
-    simple:'Haben bei der WTO reiche Länder mehr Einfluss auf die Regeln – obwohl offiziell alle Mitglieder gleich sind?',
+    simple:'Haben bei der WTO reiche Länder mehr Einfluss auf die Regeln, obwohl offiziell alle Mitglieder gleich sind?',
     axis:'governance', pol:-1 }, // soft
 
   { topic:'◈ WTO & globale Ordnung', topicClass:'pill-governance', sideSub:'Welthandelsorganisation (WTO)',
@@ -304,12 +304,12 @@ window.QUESTIONS = [
     axis:'governance', pol:-1 },
 
   { topic:'◈ WTO & globale Ordnung', topicClass:'pill-governance', sideSub:'Welthandelsorganisation (WTO)',
-    text:'Wenn Länder gegen WTO-Regeln verstoßen, sollten automatisch [[Sanktionen]] folgen – ohne Ausnahmen für mächtige Staaten.',
+    text:'Wenn Länder gegen WTO-Regeln verstoßen, sollten automatisch [[Sanktionen]] folgen, ohne Ausnahmen für mächtige Staaten.',
     terms:{ 'Sanktionen':'Strafmaßnahmen gegen Länder, die gegen vereinbarte Regeln verstoßen. Im Handelskontext meist Gegenmaßnahmen oder Strafzölle, die von der WTO autorisiert werden.' },
     agree:'Du willst konsequentes gleiches Recht für alle – auch für die USA oder China. Ohne Durchsetzung sind Regeln bedeutungslos.',
     disagree:'Du glaubst, dass automatische Sanktionen zu starr sind und geopolitische Realitäten ignorieren – Diplomatie und Ermessen sind notwendig.',
     context:'Das WTO-Streitbeilegungssystem ist das einzige bindende internationale Handelsgericht. Es scheitert aber an der Durchsetzung gegen Großmächte.',
-    simple:'Wenn ein Land die WTO-Regeln bricht – soll es dann automatisch bestraft werden, auch wenn es mächtig ist wie die USA?',
+    simple:'Wenn ein Land die WTO-Regeln bricht: Soll es dann automatisch bestraft werden, auch wenn es so mächtig ist wie die USA?',
     axis:'governance', pol:+1 },
 
   { topic:'◈ WTO & globale Ordnung', topicClass:'pill-governance', sideSub:'Welthandelsorganisation (WTO)',
