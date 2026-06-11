@@ -61,11 +61,11 @@
         <div class="landing-meta">
             <span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                30 Fragen
+                24 Fragen
             </span>
             <span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                ca. 15 Minuten
+                ca. 12 Minuten
             </span>
             <span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
@@ -95,7 +95,8 @@
                von Freihandel und Protektionismus über Postwachstumsökonomie bis zur Rolle der WTO.</p>
             <p>Das Ziel ist nicht nur eine Verortung, sondern <b>Wissensvermittlung</b>: Jede Frage
                erklärt, was Zustimmung und Ablehnung inhaltlich bedeuten, liefert Kontext aus Forschung
-               und Politik und lässt sich auf Wunsch in einfache Sprache übersetzen.</p>
+               und Politik und lässt sich auf Wunsch in einfache Sprache übersetzen. Nach jedem
+               Themenblock fasst ein <b>Lern-Checkpoint</b> das Wichtigste zusammen.</p>
         </div>
 
         <div class="about-block">
@@ -108,7 +109,7 @@
                 <li class="ax-governance"><b>Governance</b> — Nationale Souveränität ↔ Globalismus:
                     Wer soll Handelsregeln setzen — Nationalstaaten oder internationale Institutionen?</li>
             </ul>
-            <p style="margin-top:.8rem">Deine 30 Antworten (je −3 bis +3) werden pro Achse gemittelt
+            <p style="margin-top:.8rem">Deine 24 Antworten (je −3 bis +3) werden pro Achse gemittelt
                und auf einen Wert von −100 bis +100 umgerechnet.</p>
         </div>
 
@@ -135,9 +136,9 @@
 
 <!-- ══════════════════ PROGRESS ══════════════════ -->
 <div id="progressBar" style="display:none">
-    <div id="progressFill" style="width:3.33%"></div>
+    <div id="progressFill" style="width:4.17%"></div>
 </div>
-<div id="progressLabel" style="display:none">1 / 30</div>
+<div id="progressLabel" style="display:none">1 / 24</div>
 
 <!-- ══════════════════ QUIZ ══════════════════ -->
 <div class="screen hidden" id="quiz">
@@ -148,7 +149,7 @@
             <div class="topic-pill pill-trade" id="topicPill">⇄ Freihandel &amp; Wohlstand</div>
 
             <div class="q-meta">
-                <span class="q-num" id="qNum">Frage 1 von 30</span>
+                <span class="q-num" id="qNum">Frage 1 von 24</span>
                 <button class="btn-simplify" id="simplifyBtn" onclick="toggleSimplify()">
                     <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
                     Vereinfachen
@@ -164,6 +165,16 @@
                         Selbst wenn ein Land bei allem schlechter ist, lohnt es sich zu handeln — solange es sich auf das spezialisiert, wobei es relativ am wenigsten benachteiligt ist. Theorie von David Ricardo (1817).
                     </div>
                 </span>]
+            </div>
+
+            <!-- Mobiler Kontext (ersetzt die Desktop-Sidebar auf kleinen Screens) -->
+            <div class="ctx-acc" id="ctxAcc">
+                <button class="ctx-acc-head" id="ctxAccHead" onclick="toggleCtxAcc()" aria-expanded="false">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+                    Hintergrund &amp; Bedeutung
+                    <svg class="ctx-acc-chev" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="ctx-acc-body" id="ctxAccBody"></div>
             </div>
 
             <!-- Slider -->
@@ -190,6 +201,26 @@
                     Zurück
                 </button>
                 <button class="btn-nav btn-next" id="nextBtn" onclick="nextQ()">
+                    Weiter
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Lern-Checkpoint (wird zwischen Themenblöcken anstelle des Fragen-Panels gezeigt) -->
+        <div class="cp-panel" id="cpPanel" style="display:none">
+            <div class="topic-pill" id="cpPill"></div>
+            <div class="cp-kicker" id="cpKicker">Checkpoint 1 von 6</div>
+            <h2 class="cp-title" id="cpTitle"></h2>
+            <p class="cp-recap" id="cpRecap"></p>
+            <div class="cp-fact">
+                <div class="cp-fact-label">Eine Zahl, die hängen bleibt</div>
+                <p class="cp-fact-text" id="cpFact"></p>
+                <div class="cp-source" id="cpSource"></div>
+            </div>
+            <div class="cp-merke" id="cpMerke"></div>
+            <div class="q-nav cp-nav">
+                <button class="btn-nav btn-next on" id="cpNextBtn" onclick="cpContinue()">
                     Weiter
                     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </button>
@@ -244,11 +275,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Mobile FAB -->
-    <button class="fab" onclick="toggleMobileSide()" id="fab">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
-    </button>
 </div>
 
 <!-- ══════════════════ RESULT ══════════════════ -->
@@ -357,7 +383,16 @@ const TOTAL = QUESTIONS.length;
 let cur = 0;
 let answered = {};
 let simplified = false;
-let mobileSideOpen = false;
+let seenCheckpoints = new Set();
+
+// Themenblöcke zur Laufzeit aus den Topic-Wechseln ableiten
+const BLOCKS = [];
+QUESTIONS.forEach((q, i) => {
+    const last = BLOCKS[BLOCKS.length - 1];
+    if (!last || last.topic !== q.topic) BLOCKS.push({ topic: q.topic, start: i, end: i });
+    else last.end = i;
+});
+const blockOf = (i) => BLOCKS.findIndex(b => i >= b.start && i <= b.end);
 
 const LABELS = [
     'Stimme gar nicht zu',
@@ -399,7 +434,20 @@ function loadQuestion(idx) {
     document.getElementById('sideTitle').textContent = 'Zur Frage';
     document.getElementById('sideSub').textContent   = q.sideSub;
     document.getElementById('sideBody').className    = 'sidebar-body';
-    document.getElementById('sideBody').innerHTML    = `
+    document.getElementById('sideBody').innerHTML    = explHTML(q);
+
+    // Mobiles Kontext-Akkordeon: gleicher Inhalt, pro Frage eingeklappt startend
+    document.getElementById('ctxAccBody').innerHTML  = explHTML(q);
+    document.getElementById('ctxAcc').classList.remove('open');
+    document.getElementById('ctxAccHead').setAttribute('aria-expanded', 'false');
+
+    // Store simple version
+    window._currentSimple = q.simple;
+}
+
+// Erklärungs-HTML (Sidebar + mobiles Akkordeon nutzen dasselbe)
+function explHTML(q) {
+    return `
         <div class="expl-section">
             <div class="expl-label agree-lbl"><span class="expl-dot agree"></span>Zustimmung bedeutet</div>
             <div class="expl-text">${q.agree}</div>
@@ -414,9 +462,12 @@ function loadQuestion(idx) {
             <div class="expl-label context-lbl"><span class="expl-dot context"></span>Kontext</div>
             <div class="expl-text">${q.context}</div>
         </div>`;
+}
 
-    // Store simple version
-    window._currentSimple = q.simple;
+function toggleCtxAcc() {
+    const acc  = document.getElementById('ctxAcc');
+    const open = acc.classList.toggle('open');
+    document.getElementById('ctxAccHead').setAttribute('aria-expanded', open ? 'true' : 'false');
 }
 
 // ── Screen transitions ──
@@ -590,8 +641,9 @@ function updateProgress() {
     document.getElementById('qNum').textContent = `Frage ${cur + 1} von ${TOTAL}`;
 }
 
-function animatePanel() {
-    const p = document.getElementById('qPanel');
+function animatePanel() { animateEl(document.getElementById('qPanel')); }
+
+function animateEl(p) {
     p.style.transition = 'none';
     p.style.opacity = '0';
     p.style.transform = 'translateX(18px)';
@@ -621,12 +673,61 @@ function resetSlider() {
 
 function nextQ() {
     if (!answered.hasOwnProperty(cur)) return;
+    const b = blockOf(cur);
+    if (cur === BLOCKS[b].end && !seenCheckpoints.has(b)) {
+        seenCheckpoints.add(b);
+        showCheckpoint(b);
+        return;
+    }
+    advanceQ();
+}
+
+function advanceQ() {
     if (cur >= TOTAL - 1) { showResult(); return; }
     cur++;
     loadQuestion(cur);
     updateProgress();
     resetSlider();
     animatePanel();
+}
+
+// ── Lern-Checkpoints ──
+function showCheckpoint(b) {
+    const block = BLOCKS[b];
+    const cp = (window.CHECKPOINTS || []).find(c => c.topic === block.topic);
+    if (!cp) { advanceQ(); return; }  // kein Checkpoint definiert → normal weiter
+
+    document.getElementById('qPanel').style.display = 'none';
+    document.getElementById('sidebar').style.visibility = 'hidden';
+
+    const pill = document.getElementById('cpPill');
+    pill.className   = `topic-pill ${cp.topicClass}`;
+    pill.textContent = block.topic;
+    document.getElementById('cpKicker').textContent = `Lern-Checkpoint ${b + 1} von ${BLOCKS.length}`;
+    document.getElementById('cpTitle').textContent  = cp.title;
+    document.getElementById('cpRecap').textContent  = cp.recap;
+    document.getElementById('cpFact').textContent   = cp.fact;
+    document.getElementById('cpSource').textContent = 'Quelle: ' + cp.source;
+    document.getElementById('cpMerke').innerHTML    = `<b>Merksatz:</b> ${cp.merke}`;
+
+    const arrow = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
+    document.getElementById('cpNextBtn').innerHTML =
+        (cur >= TOTAL - 1 ? 'Zur Auswertung ' : 'Weiter ') + arrow;
+
+    const p = document.getElementById('cpPanel');
+    p.style.display = 'block';
+    animateEl(p);
+}
+
+function hideCheckpoint() {
+    document.getElementById('cpPanel').style.display = 'none';
+    document.getElementById('qPanel').style.display = '';
+    document.getElementById('sidebar').style.visibility = '';
+}
+
+function cpContinue() {
+    hideCheckpoint();
+    advanceQ();
 }
 
 function prevQ() {
@@ -699,13 +800,15 @@ function showResult() {
 
 function restartQuiz() {
     cur = 0; answered = {}; simplified = false;
+    seenCheckpoints = new Set();
+    hideCheckpoint();
     loadQuestion(0);
     showScreen('result', 'landing');
     document.getElementById('landing').scrollTop = 0;
     if (window.__globe) window.__globe.resume();
     document.getElementById('progressBar').style.display = 'none';
     document.getElementById('progressLabel').style.display = 'none';
-    document.getElementById('progressFill').style.width = '3.33%';
+    document.getElementById('progressFill').style.width = '4.17%';
     document.getElementById('fillTrade').style.width = '0%';
     document.getElementById('fillEconomy').style.width = '0%';
     document.getElementById('fillGovernance').style.width = '0%';
@@ -727,12 +830,6 @@ function goAbout() {
     setTimeout(() => {
         document.getElementById('about').scrollIntoView();
     }, 450);
-}
-
-// ── Mobile sidebar ──
-function toggleMobileSide() {
-    mobileSideOpen = !mobileSideOpen;
-    document.getElementById('sidebar').classList.toggle('open', mobileSideOpen);
 }
 
 // ── Parteien: Legende + Info-Karte ──

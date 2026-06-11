@@ -644,19 +644,63 @@ body::after {
 .expl-text { font-size: 13px; color: var(--text-muted); line-height: 1.65; }
 .expl-divider { height: 1px; background: var(--border); margin: .9rem 0; }
 
-/* Mobile-Sidebar-Toggle */
-.fab {
+/* Mobiles Kontext-Akkordeon (ersetzt die Sidebar auf kleinen Screens) */
+.ctx-acc {
     display: none;
-    position: fixed; bottom: 1.6rem; right: 1.6rem;
-    width: 54px; height: 54px; border-radius: 50%;
-    background: var(--accent);
-    align-items: center; justify-content: center;
-    cursor: pointer; z-index: 95; border: none;
-    color: var(--accent-ink); font-size: 21px;
-    box-shadow: 0 4px 18px rgba(0,0,0,.45);
-    transition: transform .2s;
+    margin: 0 0 1.6rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--surface);
 }
-.fab:hover { transform: scale(1.06); }
+.ctx-acc-head {
+    display: flex; align-items: center; gap: 7px;
+    width: 100%; padding: 11px 13px;
+    background: none; border: none; cursor: pointer;
+    font-family: var(--mono); font-size: 11px; font-weight: 600;
+    letter-spacing: .06em; text-transform: uppercase;
+    color: var(--text-muted);
+}
+.ctx-acc-chev { margin-left: auto; transition: transform .25s var(--ease); }
+.ctx-acc.open .ctx-acc-chev { transform: rotate(180deg); }
+.ctx-acc-body { display: none; padding: 2px 13px 14px; }
+.ctx-acc.open .ctx-acc-body { display: block; }
+
+/* ══════════════════════════════════════
+   LERN-CHECKPOINT
+══════════════════════════════════════ */
+.cp-panel { padding-right: 2.5rem; }
+.cp-kicker {
+    font-family: var(--mono); font-size: 11px; font-weight: 600;
+    letter-spacing: .12em; text-transform: uppercase;
+    color: var(--accent); margin: 1.1rem 0 .5rem;
+}
+.cp-title {
+    font-family: var(--grotesk);
+    font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700;
+    letter-spacing: -.01em; color: var(--text); margin-bottom: .9rem;
+}
+.cp-recap {
+    font-size: 14.5px; color: var(--text-muted);
+    line-height: 1.7; margin-bottom: 1.4rem;
+}
+.cp-fact {
+    border: 1px solid var(--border); border-left: 3px solid var(--accent);
+    border-radius: var(--radius-sm); background: var(--surface);
+    padding: 13px 16px; margin-bottom: 1.2rem;
+}
+.cp-fact-label {
+    font-family: var(--mono); font-size: 10px; font-weight: 600;
+    letter-spacing: .12em; text-transform: uppercase;
+    color: var(--text-dim); margin-bottom: 6px;
+}
+.cp-fact-text { font-size: 13.5px; color: var(--text); line-height: 1.6; }
+.cp-source {
+    font-family: var(--mono); font-size: 10.5px;
+    color: var(--text-dim); margin-top: 7px;
+}
+.cp-merke { font-size: 13px; color: var(--text-muted); line-height: 1.65; margin-bottom: 2rem; }
+.cp-merke b { color: var(--accent); font-weight: 600; }
+.cp-nav { justify-content: flex-end; }
 
 /* ══════════════════════════════════════
    ERGEBNIS
@@ -813,20 +857,10 @@ body::after {
     }
     .q-panel { padding-right: 0; }
 
-    .sidebar {
-        position: fixed; bottom: 0; left: 0; right: 0; top: auto;
-        padding: 1.2rem 1.25rem 2rem;
-        border-left: none; border-top: 1px solid var(--border);
-        background: #0e1825;
-        transform: translateY(100%);
-        transition: transform .35s var(--ease);
-        z-index: 90; max-height: 60vh; overflow: auto;
-        border-radius: 14px 14px 0 0;
-    }
-    .sidebar.open { transform: translateY(0); }
-
-    .fab { display: flex; }
-    .quiz-grid .sidebar { display: block; }
+    /* Sidebar-Inhalte stecken mobil im Kontext-Akkordeon unter der Frage */
+    .sidebar { display: none; }
+    .ctx-acc { display: block; }
+    .cp-panel { padding-right: 0; }
 
     #result { padding: 1.5rem 1.1rem; }
     #compass3d-wrap { height: min(50vh, 380px); }
