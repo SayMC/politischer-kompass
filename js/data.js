@@ -90,8 +90,8 @@ window.QUESTIONS = [
     axis:'trade', pol:+1 },
 
   { topic:'⇄ US-Protektionismus', topicClass:'pill-trade', sideSub:'US-amerikanischer Protektionismus',
-    text:'Wer seine Industrie durch Zölle schützt, sichert damit dauerhaft Arbeitsplätze für die eigene Bevölkerung.',
-    terms:{},
+    text:'Wer seine Industrie durch [[Zölle]] schützt, sichert damit dauerhaft Arbeitsplätze für die eigene Bevölkerung.',
+    terms:{ 'Zölle':'Abgaben auf importierte Waren, die deren Preis im Inland erhöhen und so heimische Produzenten schützen sollen.' },
     agree:'Du glaubst, dass staatlicher Schutz heimische Industrien und Jobs erhält – ein legitimes wirtschaftspolitisches Ziel.',
     disagree:'Du glaubst, dass Schutzzölle ineffiziente Industrien künstlich am Leben halten und langfristig Wettbewerbsfähigkeit sowie Wachstum bremsen.',
     context:'Kurzfristig können Zölle bestimmte Jobs erhalten. Langfristig zeigt die Forschung oft negative Effekte: höhere Preise für Verbraucher, Vergeltungsmaßnahmen und sinkende Produktivität.',
@@ -108,8 +108,8 @@ window.QUESTIONS = [
     axis:'trade', pol:-1 },
 
   { topic:'⇄ US-Protektionismus', topicClass:'pill-trade', sideSub:'US-amerikanischer Protektionismus',
-    text:'Die EU sollte auf US-Strafzölle mit eigenen [[Gegenzöllen]] antworten, statt weiter allein auf freien Handel zu setzen.',
-    terms:{ 'Gegenzöllen':'Zölle, die ein Land gezielt als Antwort auf Zölle eines anderen Landes einführt – als Druckmittel, um deren Rücknahme zu erreichen. Auch „Vergeltungszölle" genannt.' },
+    text:'Die EU sollte auf [[US-Strafzölle]] mit eigenen [[Gegenzöllen]] antworten, statt weiter allein auf freien Handel zu setzen.',
+    terms:{ 'US-Strafzölle':'Besonders hohe Zölle, die die USA als wirtschaftliche Strafmaßnahme gegen andere Länder einsetzen – seit 2018 vor allem gegen China, zeitweise auch gegen die EU (Stahl und Aluminium).', 'Gegenzöllen':'Zölle, die ein Land gezielt als Antwort auf Zölle eines anderen Landes einführt – als Druckmittel, um deren Rücknahme zu erreichen. Auch „Vergeltungszölle" genannt.' },
     agree:'Du glaubst, dass die EU Stärke zeigen muss: Nur wer glaubwürdig zurückschlagen kann, wird am Verhandlungstisch ernst genommen.',
     disagree:'Du glaubst, dass Gegenzölle die Eskalation verschärfen und am Ende vor allem die eigenen Verbraucher und Unternehmen belasten.',
     context:'Die EU reagierte auf die US-Stahlzölle von 2018 mit Gegenzöllen auf symbolträchtige US-Produkte wie Motorräder, Whiskey und Jeans – gezielt auf politisch sensible Branchen. Ob Vergeltung Verhandlungen fördert oder Handelskriege verlängert, ist umstritten.',
@@ -192,8 +192,8 @@ window.QUESTIONS = [
 
   // ── Block 5: Fairer Handel ──
   { topic:'◈ Fairer Handel', topicClass:'pill-governance', sideSub:'Fairer Handel',
-    text:'Handelsabkommen zwischen reichen und armen Ländern nützen am Ende vor allem den reichen Ländern. ([[asymmetrische Handelspartnerschaft]])',
-    terms:{ 'asymmetrische Handelspartnerschaft':'Handelsverhältnis zwischen Ländern mit stark unterschiedlicher Wirtschaftskraft. Der stärkere Partner kann Bedingungen diktieren, die seinen eigenen Interessen dienen.' },
+    text:'[[Handelsabkommen]] zwischen reichen und armen Ländern nützen am Ende vor allem den reichen Ländern. ([[asymmetrische Handelspartnerschaft]])',
+    terms:{ 'Handelsabkommen':'Vertrag zwischen zwei oder mehr Ländern, der ihren Handel regelt – z.B. Zölle senkt, Märkte öffnet oder gemeinsame Standards festlegt. Beispiele: CETA (EU–Kanada), USMCA (USA–Mexiko–Kanada).', 'asymmetrische Handelspartnerschaft':'Handelsverhältnis zwischen Ländern mit stark unterschiedlicher Wirtschaftskraft. Der stärkere Partner kann Bedingungen diktieren, die seinen eigenen Interessen dienen.' },
     agree:'Du siehst globale Handelsregeln als von Industrienationen gestaltetes System, das ihre Macht festigt und Entwicklungsländer strukturell benachteiligt.',
     disagree:'Du glaubst, dass Handelsabkommen auch armen Ländern Marktzugang und Investitionen bringen – und von diesen freiwillig ausgehandelt werden.',
     context:'Kritiker wie Ha-Joon Chang zeigen, dass reiche Länder armen die Mittel verweigern, mit denen sie selbst reich wurden: Industriepolitik, Schutzzölle, staatliche Förderung.',
@@ -201,8 +201,8 @@ window.QUESTIONS = [
     axis:'governance', pol:-1 }, // soft
 
   { topic:'◈ Fairer Handel', topicClass:'pill-governance', sideSub:'Fairer Handel',
-    text:'Entwicklungsländer sollten ihre Industrien schützen dürfen, auch wenn das gegen internationale Handelsregeln verstößt.',
-    terms:{},
+    text:'[[Entwicklungsländer]] sollten ihre Industrien schützen dürfen, auch wenn das gegen internationale Handelsregeln verstößt.',
+    terms:{ 'Entwicklungsländer':'Länder mit vergleichsweise niedrigem Einkommen und wenig entwickelter Industrie, auch „Globaler Süden" genannt. Gegenstück zu den reichen Industrienationen.' },
     agree:'Du priorisierst wirtschaftliche Entwicklungsrechte über internationale Regeltreue. Arme Länder sollen die Instrumente nutzen dürfen, die reiche Länder historisch auch nutzten.',
     disagree:'Du glaubst, dass einheitliche Regeln wichtig sind – Ausnahmen untergraben das internationale Handelssystem und schaffen neue Ungleichheiten.',
     context:'Die WTO erlaubt „Special and Differential Treatment" für Entwicklungsländer – in der Praxis sind diese Ausnahmen aber begrenzt und oft umstritten.',
@@ -210,8 +210,8 @@ window.QUESTIONS = [
     axis:'governance', pol:-1 },
 
   { topic:'◈ Fairer Handel', topicClass:'pill-governance', sideSub:'Fairer Handel',
-    text:'Reiche Länder, die ihren Agrarsektor [[subventionieren]], betreiben damit Protektionismus auf Kosten der Entwicklungsländer.',
-    terms:{ 'subventionieren':'Staatliche finanzielle Unterstützung für Unternehmen oder Sektoren. Agrarsubventionen senken Produktionskosten und ermöglichen günstigere Exportpreise.' },
+    text:'Reiche Länder, die ihren [[Agrarsektor]] [[subventionieren]], betreiben damit [[Protektionismus]] auf Kosten der Entwicklungsländer.',
+    terms:{ 'Agrarsektor':'Der Teil der Wirtschaft, der Lebensmittel und andere landwirtschaftliche Produkte erzeugt – Ackerbau, Viehzucht, teils auch Fischerei.', 'subventionieren':'Staatliche finanzielle Unterstützung für Unternehmen oder Sektoren. Agrarsubventionen senken Produktionskosten und ermöglichen günstigere Exportpreise.', 'Protektionismus':'Wirtschaftspolitik, die heimische Industrien durch Zölle, Quoten und andere Maßnahmen vor ausländischer Konkurrenz schützt.' },
     agree:'Du siehst eine strukturelle Ungleichheit: Reiche Länder schützen ihre Landwirtschaft massiv, während sie Entwicklungsländern offene Märkte abverlangen.',
     disagree:'Du siehst Agrarsubventionen als interne Entscheidung souveräner Staaten, die Ernährungssicherheit und ländliche Strukturen stützen.',
     context:'Die EU-Agrarpolitik schüttet jährlich ~50 Mrd. € aus. Afrikanische Bauern können mit den künstlich verbilligten Importen kaum konkurrieren.',
@@ -219,8 +219,8 @@ window.QUESTIONS = [
     axis:'governance', pol:+1 }, // soft
 
   { topic:'◈ Fairer Handel', topicClass:'pill-governance', sideSub:'Fairer Handel',
-    text:'Internationale Handelspartnerschaft kann nur funktionieren, wenn es verbindliche Fairness- und Sozialstandards gibt.',
-    terms:{},
+    text:'Internationale Handelspartnerschaft kann nur funktionieren, wenn es verbindliche Fairness- und [[Sozialstandards]] gibt.',
+    terms:{ 'Sozialstandards':'Verbindliche Mindestregeln für Arbeitsbedingungen – z.B. Verbot von Kinderarbeit, Arbeitsschutz, Mindestlöhne und das Recht, Gewerkschaften zu gründen.' },
     agree:'Du glaubst, dass Freihandel ohne Mindeststandards (Umwelt, Arbeit) zu einem „Race to the Bottom" führt – Länder erkaufen sich Vorteile durch Deregulierung.',
     disagree:'Du siehst Sozialstandards in Handelsabkommen als verdeckten Protektionismus: Reiche Länder schützen damit ihre teurere Produktion vor günstigerer Konkurrenz.',
     context:'„Race to the Bottom": Theorie, dass Länder Umwelt- und Sozialstandards senken, um Investoren anzuziehen. Empirisch für bestimmte Sektoren belegt, aber nicht universell.',
