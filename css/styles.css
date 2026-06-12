@@ -263,6 +263,19 @@ body::after {
 .btn-primary svg { transition: transform .2s var(--ease); }
 .btn-primary:hover svg { transform: translateX(3px); }
 
+/* ── Modus-Auswahl (Schnellstart / Ausführlich) ── */
+.mode-choose { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: center; }
+.btn-secondary {
+    background: transparent; color: var(--text);
+    border: 1px solid var(--border-strong); box-shadow: none;
+}
+.btn-secondary:hover { background: rgba(159,179,196,.08); border-color: var(--text-muted); }
+.mode-note {
+    margin: 1rem auto 0; max-width: 30rem;
+    font-family: var(--mono); font-size: 11.5px; line-height: 1.55;
+    letter-spacing: .02em; color: var(--text-dim); text-align: center;
+}
+
 .about-link {
     display: inline-block; margin-top: 1.6rem;
     font-family: var(--mono); font-size: 12px; letter-spacing: .04em;

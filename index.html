@@ -30,10 +30,16 @@
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
             </div>
             <!-- Direkter Start auf Mobilgeräten (kein Scroll-Jacking nötig) -->
-            <button class="btn-primary hero-cta" onclick="startQuiz()">
-                Test starten
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </button>
+            <div class="mode-choose hero-modes">
+                <button class="btn-primary hero-cta" onclick="startQuiz('quick')">
+                    Schnellstart · 24
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+                <button class="btn-primary btn-secondary hero-cta" onclick="startQuiz('full')">
+                    Ausführlich · 60
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+            </div>
         </div>
     </section>
 
@@ -61,11 +67,11 @@
         <div class="landing-meta">
             <span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                24 Fragen
+                24 oder 60 Fragen
             </span>
             <span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                ca. 12 Minuten
+                ca. 12 bis 30 Minuten
             </span>
             <span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
@@ -73,10 +79,17 @@
             </span>
         </div>
 
-        <button class="btn-primary" onclick="startQuiz()">
-            Jetzt starten
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </button>
+        <div class="mode-choose">
+            <button class="btn-primary" onclick="startQuiz('quick')">
+                Schnellstart · 24 Fragen
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <button class="btn-primary btn-secondary" onclick="startQuiz('full')">
+                Ausführlich · 60 Fragen
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+        </div>
+        <div class="mode-note">Schnellstart: die 24 Kernfragen, ca. 12 Minuten. Ausführlich: alle 60 Fragen mit mehr Themenblöcken, ca. 30 Minuten.</div>
 
         <br>
         <a class="about-link" href="#about">Über dieses Projekt &amp; Quellen ↓</a>
@@ -91,7 +104,7 @@
         <div class="about-block">
             <h3>Wer &amp; warum</h3>
             <p>Dieser politische Kompass ist ein <b>Schülerprojekt im Fach Politische Bildung (PB)</b>.
-               Er behandelt den Themenkomplex <b>Welthandel, Wirtschaft und globale Ordnung</b> —
+               Er behandelt den Themenkomplex <b>Welthandel, Wirtschaft und globale Ordnung</b>:
                von Freihandel und Protektionismus über Postwachstumsökonomie bis zur Rolle der WTO.</p>
             <p>Das Ziel ist nicht nur eine Verortung, sondern <b>Wissensvermittlung</b>: Jede Frage
                erklärt, was Zustimmung und Ablehnung inhaltlich bedeuten, liefert Kontext aus Forschung
@@ -102,14 +115,14 @@
         <div class="about-block">
             <h3>Die drei Achsen</h3>
             <ul>
-                <li class="ax-trade"><b>Handelsordnung</b> — Protektionismus ↔ Freihandel:
+                <li class="ax-trade"><b>Handelsordnung</b> (Protektionismus ↔ Freihandel):
                     Sollen Märkte offen sein, oder dürfen Staaten ihre Wirtschaft schützen?</li>
-                <li class="ax-economy"><b>Wirtschaftsmodell</b> — Postwachstum ↔ Wachstum:
+                <li class="ax-economy"><b>Wirtschaftsmodell</b> (Postwachstum ↔ Wachstum):
                     Braucht Wohlstand dauerhaftes Wachstum, oder geht es auch ohne?</li>
-                <li class="ax-governance"><b>Governance</b> — Nationale Souveränität ↔ Globalismus:
-                    Wer soll Handelsregeln setzen — Nationalstaaten oder internationale Institutionen?</li>
+                <li class="ax-governance"><b>Governance</b> (Nationale Souveränität ↔ Globalismus):
+                    Wer soll Handelsregeln setzen, Nationalstaaten oder internationale Institutionen?</li>
             </ul>
-            <p style="margin-top:.8rem">Deine 24 Antworten (je −3 bis +3) werden pro Achse gemittelt
+            <p style="margin-top:.8rem">Deine Antworten (je −3 bis +3) werden pro Achse gemittelt
                und auf einen Wert von −100 bis +100 umgerechnet.</p>
         </div>
 
@@ -120,14 +133,14 @@
                den <b>Wahlprogrammen zur Bundestagswahl 2025</b> sowie Materialien des
                <b>Wahl-O-Mat / der bpb</b>.</p>
             <p>Wichtig: Die Parteiwerte sind eine <b>fundierte Schätzung, keine offizielle Messung</b>.
-               Auch die Zuordnung der Fragen zu den Achsen enthält Interpretationsspielraum —
-               der Kompass ist ein Lern- und Diskussionswerkzeug, kein wissenschaftliches Instrument.</p>
+               Auch die Zuordnung der Fragen zu den Achsen enthält Interpretationsspielraum.
+               Der Kompass ist ein Lern- und Diskussionswerkzeug, kein wissenschaftliches Instrument.</p>
         </div>
 
         <div class="about-block">
             <h3>Datenschutz</h3>
             <p>Der Kompass läuft vollständig in deinem Browser. <b>Keine Antwort wird gespeichert
-               oder übertragen</b> — nach dem Neuladen der Seite ist alles weg.</p>
+               oder übertragen</b>. Nach dem Neuladen der Seite ist alles weg.</p>
         </div>
 
         <div class="about-foot">PB-Projekt · Politischer Kompass — Handel &amp; Wirtschaft</div>
@@ -373,26 +386,44 @@
 // ══════════════════════════════════════════
 //  QUESTION DATA
 // ══════════════════════════════════════════
-// QUESTIONS kommt jetzt aus js/data.js (window.QUESTIONS)
+// QUESTIONS kommt jetzt aus js/data.js (window.QUESTIONS) — voller Pool (60 Fragen)
 const QUESTIONS = window.QUESTIONS;
 
 // ══════════════════════════════════════════
 //  RUNTIME STATE
 // ══════════════════════════════════════════
-const TOTAL = QUESTIONS.length;
+// ACTIVE = das aktuell gespielte Frageset. Schnellstart spielt nur die
+// Kern-Blöcke (q.core, 24 Fragen), die ausführliche Version alle 60.
+// TOTAL und BLOCKS werden bei jedem Quizstart aus ACTIVE neu aufgebaut.
+let ACTIVE = QUESTIONS;
+let TOTAL  = ACTIVE.length;
+let BLOCKS = [];
+let quizMode = 'full';
 let cur = 0;
 let answered = {};
 let simplified = false;
 let seenCheckpoints = new Set();
 
-// Themenblöcke zur Laufzeit aus den Topic-Wechseln ableiten
-const BLOCKS = [];
-QUESTIONS.forEach((q, i) => {
-    const last = BLOCKS[BLOCKS.length - 1];
-    if (!last || last.topic !== q.topic) BLOCKS.push({ topic: q.topic, start: i, end: i });
-    else last.end = i;
-});
+// Themenblöcke zur Laufzeit aus den Topic-Wechseln des aktiven Sets ableiten
+function buildBlocks() {
+    BLOCKS = [];
+    ACTIVE.forEach((q, i) => {
+        const last = BLOCKS[BLOCKS.length - 1];
+        if (!last || last.topic !== q.topic) BLOCKS.push({ topic: q.topic, start: i, end: i });
+        else last.end = i;
+    });
+}
+
+// Modus festlegen: 'quick' = nur Kern-Blöcke (24), sonst alle (60).
+function setMode(mode) {
+    quizMode = (mode === 'quick') ? 'quick' : 'full';
+    ACTIVE = (quizMode === 'quick') ? QUESTIONS.filter(q => q.core) : QUESTIONS;
+    TOTAL  = ACTIVE.length;
+    buildBlocks();
+}
+
 const blockOf = (i) => BLOCKS.findIndex(b => i >= b.start && i <= b.end);
+buildBlocks(); // Initialaufbau (Vollset), bis der Nutzer einen Modus wählt
 
 const LABELS = [
     'Stimme gar nicht zu',
@@ -414,7 +445,7 @@ function processText(text, terms) {
 
 // ── loadQuestion: populate all UI from data ──
 function loadQuestion(idx) {
-    const q = QUESTIONS[idx];
+    const q = ACTIVE[idx];
 
     // Topic pill
     const pill = document.getElementById('topicPill');
@@ -482,24 +513,31 @@ function showScreen(fromId, toId) {
     }, 380);
 }
 
-function startQuiz() {
+function startQuiz(mode) {
+    setMode(mode);
+    cur = 0; answered = {}; simplified = false; seenCheckpoints = new Set();
+    hideCheckpoint();
     if (window.__globe) window.__globe.pause();
     showScreen('landing', 'quiz');
     document.getElementById('progressBar').style.display = 'block';
     document.getElementById('progressLabel').style.display = 'block';
     loadQuestion(0);
     updateProgress();
+    resetSlider();
     csInit();
 }
 
 // ── Custom Slider ──
 let csDragging = false;
+let csInited = false;
 
 function csInit() {
+    if (csInited) return;               // Listener nur einmal binden
     const el = document.getElementById('cSlider');
     if (!el) return;
     el.addEventListener('mousedown',  csStart, { passive: false });
     el.addEventListener('touchstart', csStart, { passive: false });
+    csInited = true;
 }
 
 function csClientX(e) {
@@ -613,7 +651,7 @@ function toggleSimplify() {
     simplified = !simplified;
     const btn   = document.getElementById('simplifyBtn');
     const qText = document.getElementById('qText');
-    const q     = QUESTIONS[cur];
+    const q     = ACTIVE[cur];
 
     btn.classList.toggle('active', simplified);
     btn.innerHTML = SIMPLIFY_ICON + (simplified ? ' Originaltext' : ' Vereinfachen');
@@ -760,7 +798,7 @@ function showResult() {
             'Die Auswertung konnte nicht geladen werden. Bitte die Seite über einen lokalen Server (http://) öffnen und neu laden.';
         return;
     }
-    const scores = window.computeScores(answered, window.QUESTIONS); // {trade,economy,governance} -100..+100
+    const scores = window.computeScores(answered, ACTIVE); // {trade,economy,governance} -100..+100
     window._scores = scores;
 
     // Hilfsfunktion: Score -100..+100 → Balkenbreite 0..100 %

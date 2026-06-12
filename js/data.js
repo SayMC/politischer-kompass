@@ -116,6 +116,117 @@ window.QUESTIONS = [
     simple:'Wenn die USA europäische Waren mit Zöllen belegen, sollte Europa amerikanische Waren genauso mit Zöllen belegen.',
     axis:'trade', pol:-1 },
 
+  // ── Block 3a (erweitert): Lieferketten & Abhängigkeit ──
+  { topic:'⇄ Lieferketten & Abhängigkeit', topicClass:'pill-trade', sideSub:'Globale Lieferketten',
+    text:'Globale, arbeitsteilige [[Lieferketten]] machen Produkte günstiger und sind effizienter als der Aufbau heimischer Produktion.',
+    terms:{ 'Lieferketten':'Das Netzwerk aus Zulieferern, Fabriken und Transportwegen, über das ein Produkt entsteht, oft über viele Länder verteilt (z. B. ein Smartphone aus Teilen von Dutzenden Zulieferern weltweit).' },
+    agree:'Du vertraust auf internationale Arbeitsteilung: Jede Stufe wird dort gefertigt, wo es am günstigsten ist. Das senkt Preise und steigert die Effizienz.',
+    disagree:'Du hältst hocheffiziente globale Ketten für zu anfällig: Spart man jede Reserve weg, bricht bei einer Störung das ganze System.',
+    context:'Die Just-in-time-Produktion minimiert Lagerkosten, hat aber während Corona und der Sueskanal-Blockade 2021 gezeigt, wie verletzlich eng getaktete Ketten sind.',
+    simple:'Wenn jedes Teil eines Produkts dort hergestellt wird, wo es am billigsten ist, werden die Produkte für alle günstiger.',
+    axis:'trade', pol:+1 },
+
+  { topic:'⇄ Lieferketten & Abhängigkeit', topicClass:'pill-trade', sideSub:'Globale Lieferketten',
+    text:'Bei lebenswichtigen Gütern wie [[Medikamenten]] und [[Halbleitern]] sollte ein Land auf eigene Produktion setzen, auch wenn das teurer ist.',
+    terms:{ 'Medikamenten':'Ein Großteil der weltweiten Wirkstoffe für Arzneimittel wird in wenigen Ländern produziert, vor allem in China und Indien.', 'Halbleitern':'Computerchips, die Grundbausteine fast aller modernen Geräte. Ihre Herstellung ist stark konzentriert: Taiwan allein fertigt über 60 % der weltweiten Chips.' },
+    agree:'Du stellst Versorgungssicherheit über den Preis: Bei kritischen Gütern darf ein Land nicht vom Ausland abhängig sein.',
+    disagree:'Du hältst teure heimische Produktion für Verschwendung: Internationale Arbeitsteilung versorgt zuverlässiger und günstiger als nationale Alleingänge.',
+    context:'Die EU (Chips Act) und die USA (CHIPS Act) investieren Milliarden, um die Halbleiterfertigung zurückzuholen, ein Bruch mit jahrzehntelanger Auslagerung.',
+    simple:'Wichtige Dinge wie Medikamente und Computerchips sollte ein Land lieber selbst herstellen, auch wenn das mehr kostet.',
+    axis:'trade', pol:-1 },
+
+  { topic:'⇄ Lieferketten & Abhängigkeit', topicClass:'pill-trade', sideSub:'Globale Lieferketten',
+    text:'Die richtige Lehre aus Lieferkettenkrisen ist, die Bezugsquellen breiter zu streuen, statt sich abzuschotten.',
+    terms:{},
+    agree:'Du setzt auf Diversifizierung statt Rückzug: Wer von mehreren Ländern bezieht, ist krisenfester, ohne die Vorteile des Welthandels aufzugeben.',
+    disagree:'Du glaubst, dass nur eigene oder regionale Produktion echte Sicherheit bietet. Mehr Handelspartner bedeuten weiterhin Abhängigkeit vom Ausland.',
+    context:'„China plus eins": Viele Konzerne behalten China, bauen aber zusätzlich Standorte in Vietnam, Indien oder Mexiko auf. Risikostreuung statt Heimkehr.',
+    simple:'Wenn Lieferungen aus einem Land ausfallen, sollte man bei mehreren Ländern einkaufen, statt alles selbst zu machen.',
+    axis:'trade', pol:+1 },
+
+  { topic:'⇄ Lieferketten & Abhängigkeit', topicClass:'pill-trade', sideSub:'Globale Lieferketten',
+    text:'Die starke Abhängigkeit von einzelnen Lieferländern wie China ist ein zu großes Risiko und rechtfertigt staatliche Eingriffe in den Handel.',
+    terms:{},
+    agree:'Du siehst einseitige Abhängigkeit als Sicherheitsrisiko, das der Staat aktiv verringern muss, etwa durch Anreize oder Vorgaben.',
+    disagree:'Du vertraust darauf, dass Unternehmen ihre Risiken selbst am besten steuern. Staatliche Eingriffe verteuern und verzerren den Handel.',
+    context:'Der Begriff „De-Risking" prägt seit 2023 die EU-Strategie gegenüber China: nicht Abkopplung, aber gezielte Reduktion kritischer Abhängigkeiten.',
+    simple:'Wenn ein Land bei wichtigen Waren zu sehr von einem einzigen Lieferland abhängt, darf der Staat in den Handel eingreifen.',
+    axis:'trade', pol:-1 },
+
+  // ── Block 3b (erweitert): Globalisierung & Arbeitsplätze ──
+  { topic:'⇄ Globalisierung & Arbeitsplätze', topicClass:'pill-trade', sideSub:'Globalisierung & Arbeitsmarkt',
+    text:'Die [[Verlagerung]] von Fabriken in Niedriglohnländer hat in den Industrieländern mehr Arbeitsplätze zerstört als geschaffen.',
+    terms:{ 'Verlagerung':'Auch „Offshoring": Unternehmen verlegen ihre Produktion ins Ausland, meist um niedrigere Löhne und Kosten zu nutzen.' },
+    agree:'Du siehst die Verlierer der Globalisierung: ganze Industrieregionen, in denen gut bezahlte Fabrikjobs verschwanden und nicht gleichwertig ersetzt wurden.',
+    disagree:'Du glaubst, dass andernorts neue, oft bessere Jobs entstanden. Der Strukturwandel verschiebt Arbeit, er vernichtet sie nicht.',
+    context:'Der „China-Schock" kostete die USA rund 1 Million Industriejobs (Autor et al. 2013). Ob die Gesamtbeschäftigung sank, ist umstritten; betroffene Regionen erholten sich aber oft nicht.',
+    simple:'Weil Fabriken in Länder mit niedrigen Löhnen verlegt wurden, sind bei uns mehr Jobs verloren gegangen als neue entstanden.',
+    axis:'trade', pol:-1 },
+
+  { topic:'⇄ Globalisierung & Arbeitsplätze', topicClass:'pill-trade', sideSub:'Globalisierung & Arbeitsmarkt',
+    text:'Globalisierung schafft unterm Strich mehr und bessere Arbeitsplätze, als sie vernichtet.',
+    terms:{},
+    agree:'Du siehst die Globalisierung als Wohlstandsmotor: Exportbranchen, neue Dienstleistungen und günstigere Vorprodukte schaffen netto mehr Beschäftigung.',
+    disagree:'Du bezweifelst die positive Gesamtbilanz oder hältst sie für zweitrangig, solange ganze Regionen und Berufsgruppen dauerhaft verlieren.',
+    context:'Exportstarke Länder wie Deutschland verdanken Millionen Jobs dem Welthandel. Der Streit dreht sich weniger um die Summe als um die Verteilung der Gewinne und Verluste.',
+    simple:'Durch den weltweiten Handel entstehen am Ende mehr und bessere Jobs, als verloren gehen.',
+    axis:'trade', pol:+1 },
+
+  { topic:'⇄ Globalisierung & Arbeitsplätze', topicClass:'pill-trade', sideSub:'Globalisierung & Arbeitsmarkt',
+    text:'Wenn Länder mit niedrigen Löhnen und schwachen [[Sozialstandards]] konkurrieren, geraten heimische Arbeitnehmer unter unfairen Druck.',
+    terms:{ 'Sozialstandards':'Regeln zum Schutz von Arbeitnehmern, etwa Mindestlöhne, Arbeitszeitgrenzen, Arbeitssicherheit und das Recht, Gewerkschaften zu gründen.' },
+    agree:'Du siehst einen unfairen Wettbewerb: Wer Löhne und Schutzrechte niedrig hält, verschafft sich Vorteile zulasten der Beschäftigten überall.',
+    disagree:'Du hältst niedrige Löhne in ärmeren Ländern für deren legitimen Vorteil: So holen sie wirtschaftlich auf, und Konsumenten profitieren von günstigen Preisen.',
+    context:'Die Sorge vor einem „Race to the Bottom", einem Abwärtswettlauf bei Löhnen und Standards, ist ein Kernargument der Globalisierungskritik. Empirisch ist er nur in Teilen belegt.',
+    simple:'Wenn andere Länder mit niedrigen Löhnen und wenig Arbeiterschutz produzieren, stehen unsere Arbeitnehmer unfair unter Druck.',
+    axis:'trade', pol:-1 },
+
+  { topic:'⇄ Globalisierung & Arbeitsplätze', topicClass:'pill-trade', sideSub:'Globalisierung & Arbeitsmarkt',
+    text:'Der [[Standortwettbewerb]] zwischen Ländern zwingt Volkswirtschaften, produktiver und innovativer zu werden, was am Ende allen nützt.',
+    terms:{ 'Standortwettbewerb':'Der Wettbewerb der Länder um Unternehmen und Investitionen, etwa über Steuern, Infrastruktur, Bildung und Bürokratie.' },
+    agree:'Du siehst Wettbewerbsdruck als gesund: Er treibt Effizienz, Bildung und Innovation an und verhindert wirtschaftliche Trägheit.',
+    disagree:'Du fürchtest, dass Standortwettbewerb vor allem Steuern, Löhne und Standards nach unten drückt, ein Wettlauf, bei dem Beschäftigte und Staatskassen verlieren.',
+    context:'Standortwettbewerb kann Reformen anstoßen, aber auch Steuersenkungswettläufe auslösen. Genau dagegen richtet sich die globale Mindeststeuer für Konzerne (2024).',
+    simple:'Weil Länder um Unternehmen konkurrieren, müssen sie besser werden, was am Ende allen nützt.',
+    axis:'trade', pol:+1 },
+
+  // ── Block 3c (erweitert): Handel als Druckmittel ──
+  { topic:'⇄ Handel als Druckmittel', topicClass:'pill-trade', sideSub:'Sanktionen & Geoökonomie',
+    text:'Handel sollte auch als politisches Druckmittel dienen, etwa durch [[Sanktionen]] gegen Staaten, die Menschenrechte verletzen.',
+    terms:{ 'Sanktionen':'Wirtschaftliche Strafmaßnahmen wie Handelsverbote, Einfuhrstopps oder das Einfrieren von Vermögen, um ein Land politisch unter Druck zu setzen.' },
+    agree:'Du findest, wirtschaftliche Macht darf für politische und moralische Ziele eingesetzt werden. Handel ist nie nur „neutral".',
+    disagree:'Du willst Handel und Politik trennen: Sanktionen treffen oft die Bevölkerung statt der Verantwortlichen und politisieren die Wirtschaft.',
+    context:'Die Sanktionen gegen Russland seit 2022 sind das größte Beispiel. Ihre Wirksamkeit ist umstritten: Sie schaden, erzwingen aber selten einen direkten Politikwechsel.',
+    simple:'Man sollte den Handel auch nutzen, um Druck zu machen, zum Beispiel mit Strafmaßnahmen gegen Länder, die Menschenrechte verletzen.',
+    axis:'trade', pol:-1 }, // soft
+
+  { topic:'⇄ Handel als Druckmittel', topicClass:'pill-trade', sideSub:'Sanktionen & Geoökonomie',
+    text:'Wirtschaftliche Verflechtung zwischen Ländern macht Kriege unwahrscheinlicher. Handel verbindet. ([[Doux commerce]])',
+    terms:{ 'Doux commerce':'„Sanfter Handel": die alte Idee (Montesquieu, 18. Jahrhundert), dass Handel Völker friedlich voneinander abhängig macht und so Konflikte dämpft.' },
+    agree:'Du glaubst, dass enge Handelsbeziehungen Anreize für Frieden schaffen: Wer voneinander profitiert, riskiert nicht leichtfertig Krieg.',
+    disagree:'Du hältst das für naiv: Wirtschaftliche Abhängigkeit kann auch erpressbar machen, und Handel hat Kriege historisch nicht verhindert.',
+    context:'Die EU begann als Friedensprojekt durch wirtschaftliche Verflechtung. Doch Deutschlands Gasabhängigkeit von Russland zeigte 2022 die Kehrseite der These.',
+    simple:'Länder, die viel miteinander handeln, führen seltener Krieg gegeneinander. Handel verbindet.',
+    axis:'trade', pol:+1 },
+
+  { topic:'⇄ Handel als Druckmittel', topicClass:'pill-trade', sideSub:'Sanktionen & Geoökonomie',
+    text:'Der Westen sollte sich von autoritären Staaten wie China wirtschaftlich gezielt [[entkoppeln]], auch um den Preis von Wohlstand.',
+    terms:{ 'entkoppeln':'„Decoupling": die bewusste Trennung wirtschaftlicher Verflechtungen zwischen Ländern, etwa durch Rückbau von Handel, Investitionen und Technologietransfer.' },
+    agree:'Du stellst Sicherheit und Werte über wirtschaftliche Gewinne: Abhängigkeit von autoritären Staaten ist langfristig gefährlicher als der Wohlstandsverlust.',
+    disagree:'Du hältst Entkopplung für teuer und unrealistisch: Sie schadet beiden Seiten und kann die Welt in feindliche Blöcke spalten.',
+    context:'Statt vollständigem „Decoupling" verfolgen EU und USA meist „De-Risking": Abhängigkeiten senken, ohne den Handel ganz abzubrechen.',
+    simple:'Der Westen sollte den Handel mit Ländern wie China bewusst zurückfahren, auch wenn das Wohlstand kostet.',
+    axis:'trade', pol:-1 },
+
+  { topic:'⇄ Handel als Druckmittel', topicClass:'pill-trade', sideSub:'Sanktionen & Geoökonomie',
+    text:'Sanktionen und Handelskriege schaden meist beiden Seiten und erreichen ihre politischen Ziele nur selten.',
+    terms:{},
+    agree:'Du siehst Handelskonflikte als wechselseitig schädlich: Beide Volkswirtschaften verlieren, während das politische Ziel selten erreicht wird.',
+    disagree:'Du hältst Sanktionen und Zölle für legitime und manchmal wirksame Druckmittel. Ohne sie fehlte ein Hebel unterhalb militärischer Gewalt.',
+    context:'Studien zur Wirksamkeit von Sanktionen sind ernüchternd: Sie erzwingen selten einen Kurswechsel, gelten aber als Signal und Druckmittel unterhalb von Krieg.',
+    simple:'Sanktionen und Handelskriege schaden am Ende beiden Seiten und bringen politisch wenig.',
+    axis:'trade', pol:+1 },
+
   // ── Block 3: Wachstum & Wohlstand ──
   { topic:'↕ Wachstum & Wohlstand', topicClass:'pill-economy', sideSub:'Wachstum & Wohlstand',
     text:'Ohne [[wirtschaftliches Wachstum]] ist es nicht möglich, Armut dauerhaft zu bekämpfen.',
@@ -190,6 +301,117 @@ window.QUESTIONS = [
     simple:'Unternehmen sollen per Gesetz weniger CO₂ ausstoßen müssen, auch wenn ihre Produkte dadurch teurer werden.',
     axis:'economy', pol:-1 },
 
+  // ── Block 4b (erweitert): Ungleichheit & Verteilung ──
+  { topic:'↕ Ungleichheit & Verteilung', topicClass:'pill-economy', sideSub:'Ungleichheit & Verteilung',
+    text:'Eine gerechtere Verteilung des vorhandenen Reichtums ist wichtiger als immer mehr [[Wachstum]].',
+    terms:{ 'Wachstum':'Steigerung der gesamten Wirtschaftsleistung (BIP), traditionell das zentrale Ziel der Wirtschaftspolitik.' },
+    agree:'Du setzt auf Umverteilung statt Wachstum: Genug Wohlstand ist vorhanden, es kommt darauf an, ihn fairer zu teilen.',
+    disagree:'Du glaubst, dass Wachstum den Wohlstand für alle vergrößert. Verteilung allein schafft keinen neuen Reichtum, sondern teilt nur den vorhandenen.',
+    context:'Ökonomen wie Piketty zeigen, dass Vermögen ohne Gegensteuern immer ungleicher wird. Andere warnen, dass zu viel Umverteilung Leistungsanreize schwächt.',
+    simple:'Den Reichtum, den es schon gibt, gerechter zu verteilen, ist wichtiger, als dass die Wirtschaft immer weiter wächst.',
+    axis:'economy', pol:-1 }, // soft
+
+  { topic:'↕ Ungleichheit & Verteilung', topicClass:'pill-economy', sideSub:'Ungleichheit & Verteilung',
+    text:'Solange die Wirtschaft insgesamt wächst, ist es zweitrangig, wie groß die Einkommensunterschiede sind.',
+    terms:{},
+    agree:'Du hältst Wachstum für entscheidend: Wenn es allen besser geht, ist die Größe der Unterschiede nachrangig.',
+    disagree:'Du glaubst, dass große Ungleichheit selbst dann schadet, wenn alle reicher werden: Sie spaltet Gesellschaften und untergräbt Chancen.',
+    context:'Die „Trickle-down"-Idee besagt, Wachstum komme am Ende allen zugute. Kritiker entgegnen, dass die Gewinne der letzten Jahrzehnte stark nach oben flossen.',
+    simple:'Wenn die Wirtschaft wächst und es allen besser geht, ist es egal, wie groß die Unterschiede zwischen Arm und Reich sind.',
+    axis:'economy', pol:+1 },
+
+  { topic:'↕ Ungleichheit & Verteilung', topicClass:'pill-economy', sideSub:'Ungleichheit & Verteilung',
+    text:'Sehr hohe Vermögen sollten stärker besteuert werden, auch wenn das Investitionen und Wachstum etwas bremst.',
+    terms:{},
+    agree:'Du priorisierst Verteilungsgerechtigkeit und öffentliche Einnahmen über maximale Wachstumsanreize.',
+    disagree:'Du fürchtest, dass hohe Vermögensteuern Investitionen, Unternehmertum und damit am Ende den Wohlstand aller verringern.',
+    context:'Vermögensteuern sind umstritten: Befürworter verweisen auf wachsende Ungleichheit, Kritiker auf Kapitalflucht und Bewertungsprobleme. Viele Länder haben sie abgeschafft.',
+    simple:'Sehr reiche Menschen sollten mehr Steuern zahlen, auch wenn dadurch etwas weniger investiert wird.',
+    axis:'economy', pol:-1 },
+
+  { topic:'↕ Ungleichheit & Verteilung', topicClass:'pill-economy', sideSub:'Ungleichheit & Verteilung',
+    text:'Wer mehr leistet und Risiken eingeht, soll auch deutlich mehr verdienen. Ungleichheit ist ein Antrieb für Wohlstand.',
+    terms:{},
+    agree:'Du siehst Einkommensunterschiede als Leistungsanreiz: Sie belohnen Anstrengung und Risiko und treiben so Innovation und Wachstum an.',
+    disagree:'Du glaubst, dass große Unterschiede weniger mit Leistung als mit Herkunft und Macht zu tun haben und Gesellschaften eher schaden als nützen.',
+    context:'Die Spannung zwischen Leistungsanreiz und Gerechtigkeit ist ein Grundkonflikt der Wirtschaftspolitik. Wie viel Ungleichheit motiviert statt spaltet, ist umstritten.',
+    simple:'Wer mehr leistet und mehr wagt, soll auch deutlich mehr verdienen. Das spornt alle an.',
+    axis:'economy', pol:+1 },
+
+  // ── Block 4c (erweitert): Konsum & Suffizienz ──
+  { topic:'↕ Konsum & Suffizienz', topicClass:'pill-economy', sideSub:'Konsum & Suffizienz',
+    text:'In reichen Ländern konsumieren wir mehr, als für ein gutes Leben nötig wäre. ([[Suffizienz]])',
+    terms:{ 'Suffizienz':'Das Prinzip „genug": bewusst weniger verbrauchen und besitzen, weil mehr Konsum ab einem gewissen Punkt kaum noch zu mehr Lebensqualität führt.' },
+    agree:'Du glaubst, dass mehr Konsum ab einem gewissen Wohlstand kaum noch glücklicher macht. Weniger wäre möglich, ohne wirklich zu verzichten.',
+    disagree:'Du hältst Konsum für Ausdruck von Freiheit und Wohlstand. Wer anderen „zu viel" vorschreibt, bevormundet sie.',
+    context:'Die „Easterlin-Paradoxie" zeigt: Ab einem gewissen Einkommen steigt die Lebenszufriedenheit kaum noch mit. Mehr Konsum bedeutet nicht automatisch mehr Glück.',
+    simple:'In reichen Ländern kaufen und verbrauchen wir mehr, als wir für ein gutes Leben eigentlich bräuchten.',
+    axis:'economy', pol:-1 },
+
+  { topic:'↕ Konsum & Suffizienz', topicClass:'pill-economy', sideSub:'Konsum & Suffizienz',
+    text:'Mehr Konsum bedeutet mehr Wohlstand und Lebensqualität. Verzicht macht ärmer, nicht glücklicher.',
+    terms:{},
+    agree:'Du siehst Konsum als Motor von Wohlstand und Fortschritt. Verzichtsappelle hältst du für rückständig und wohlstandsfeindlich.',
+    disagree:'Du glaubst, dass ständig mehr Konsum weder glücklicher macht noch ökologisch tragbar ist.',
+    context:'Konsum macht rund die Hälfte der Wirtschaftsleistung aus und treibt Wachstum. Ob mehr Konsum auch mehr Zufriedenheit bringt, bezweifelt die Glücksforschung.',
+    simple:'Mehr zu kaufen bedeutet mehr Wohlstand und ein besseres Leben. Verzicht macht ärmer, nicht glücklicher.',
+    axis:'economy', pol:+1 },
+
+  { topic:'↕ Konsum & Suffizienz', topicClass:'pill-economy', sideSub:'Konsum & Suffizienz',
+    text:'Geplante [[Obsoleszenz]] und Wegwerfkultur zeigen, dass unser Wirtschaftsmodell auf Verschwendung beruht.',
+    terms:{ 'Obsoleszenz':'„Geplanter Verschleiß": der Verdacht, dass Produkte absichtlich so gebaut werden, dass sie schnell kaputtgehen oder veralten, damit man Neues kauft.' },
+    agree:'Du siehst ein System, das auf ständigem Neukauf beruht: Nachhaltiges, langlebiges Wirtschaften wäre möglich, lohnt sich aber nicht genug.',
+    disagree:'Du hältst geplante Obsoleszenz für überschätzt: Produkte werden günstiger und besser, kurze Lebenszyklen sind oft Folge von Innovation und Nachfrage.',
+    context:'Die EU stärkt mit dem „Recht auf Reparatur" (2024) langlebige Produkte. Wie verbreitet absichtlicher Verschleiß wirklich ist, bleibt empirisch umstritten.',
+    simple:'Dass viele Dinge schnell kaputtgehen und weggeworfen werden, zeigt: Unsere Wirtschaft lebt von Verschwendung.',
+    axis:'economy', pol:-1 },
+
+  { topic:'↕ Konsum & Suffizienz', topicClass:'pill-economy', sideSub:'Konsum & Suffizienz',
+    text:'Der Konsumverzicht Einzelner bringt wenig. Entscheidend sind Technologie und Wachstum, nicht weniger zu kaufen.',
+    terms:{},
+    agree:'Du setzt auf systemische Lösungen statt individuellen Verzicht: Innovation und Effizienz lösen Umweltprobleme wirksamer als Selbstbeschränkung.',
+    disagree:'Du glaubst, dass auch Lebensstil und Konsumverhalten zählen. Allein auf Technik und Wachstum zu hoffen, ist eine bequeme Ausrede.',
+    context:'Ob Technik (grünes Wachstum) oder weniger Konsum (Suffizienz) der bessere Weg ist, ist ein Kernstreit der Umweltökonomie. Meist braucht es beides.',
+    simple:'Wenn Einzelne weniger kaufen, ändert das wenig. Wichtig sind neue Technik und Wachstum, nicht Verzicht.',
+    axis:'economy', pol:+1 },
+
+  // ── Block 4d (erweitert): Arbeit, Zeit & Automatisierung ──
+  { topic:'↕ Arbeit, Zeit & Automatisierung', topicClass:'pill-economy', sideSub:'Arbeit, Zeit & Automatisierung',
+    text:'Produktivitätsgewinne sollten in kürzere Arbeitszeit fließen (z. B. [[Vier-Tage-Woche]]) statt in immer mehr Produktion.',
+    terms:{ 'Vier-Tage-Woche':'Modell, bei dem die Wochenarbeitszeit auf vier Tage verkürzt wird, idealerweise bei vollem Lohn, finanziert aus höherer Produktivität.' },
+    agree:'Du willst Wohlstandsgewinne in Lebenszeit statt in mehr Output verwandeln: weniger Arbeit bei gleichem Lebensstandard.',
+    disagree:'Du hältst kürzere Arbeitszeit für ein Wohlstandsrisiko: Sie verteuert Arbeit, schwächt die Wirtschaft und ist angesichts des Fachkräftemangels unrealistisch.',
+    context:'Pilotprojekte (unter anderem in Island und Großbritannien) zeigen oft stabile Produktivität bei höherer Zufriedenheit. Die Übertragbarkeit auf ganze Volkswirtschaften ist offen.',
+    simple:'Wenn wir produktiver werden, sollten wir weniger arbeiten (zum Beispiel vier Tage pro Woche) statt immer mehr zu produzieren.',
+    axis:'economy', pol:-1 },
+
+  { topic:'↕ Arbeit, Zeit & Automatisierung', topicClass:'pill-economy', sideSub:'Arbeit, Zeit & Automatisierung',
+    text:'Eine kürzere Arbeitszeit bei vollem Lohn würde Wohlstand und [[Wettbewerbsfähigkeit]] gefährden.',
+    terms:{ 'Wettbewerbsfähigkeit':'Die Fähigkeit einer Wirtschaft, im internationalen Vergleich mitzuhalten, etwa über Preise, Qualität und Produktivität.' },
+    agree:'Du glaubst, dass weniger Arbeit bei gleichem Lohn die Kosten erhöht, die Produktion senkt und im internationalen Wettbewerb zurückwirft.',
+    disagree:'Du glaubst, dass ausgeruhte, motivierte Beschäftigte das ausgleichen. Kürzere Arbeitszeit muss Wohlstand nicht kosten.',
+    context:'Gegner verweisen auf Fachkräftemangel und Lohnkosten, Befürworter auf Produktivitäts- und Gesundheitsgewinne. Die Bilanz hängt stark von der Branche ab.',
+    simple:'Weniger zu arbeiten bei gleichem Lohn würde unseren Wohlstand und die Stärke der Wirtschaft gefährden.',
+    axis:'economy', pol:+1 },
+
+  { topic:'↕ Arbeit, Zeit & Automatisierung', topicClass:'pill-economy', sideSub:'Arbeit, Zeit & Automatisierung',
+    text:'Automatisierung und [[KI]] schaffen langfristig mehr Wohlstand und neue Arbeitsplätze, auch wenn alte wegfallen.',
+    terms:{ 'KI':'Künstliche Intelligenz: Computersysteme, die Aufgaben übernehmen, die bisher menschliches Denken erforderten, etwa Texte schreiben oder Bilder auswerten.' },
+    agree:'Du vertraust dem historischen Muster: Technischer Fortschritt vernichtet Jobs, schafft aber unterm Strich neue und steigert den Wohlstand.',
+    disagree:'Du fürchtest, dass KI diesmal anders ist: Sie könnte schneller mehr Tätigkeiten ersetzen, als neue entstehen, und die Ungleichheit verschärfen.',
+    context:'Bisher schuf Automatisierung netto Beschäftigung. Ob KI als „diesmal anders"-Technologie diesem Muster folgt, ist eine der großen offenen Fragen.',
+    simple:'Maschinen und KI schaffen am Ende mehr Wohlstand und neue Jobs, auch wenn alte verschwinden.',
+    axis:'economy', pol:+1 },
+
+  { topic:'↕ Arbeit, Zeit & Automatisierung', topicClass:'pill-economy', sideSub:'Arbeit, Zeit & Automatisierung',
+    text:'Ständiges Wachstum zwingt Menschen in immer mehr Arbeit und Stress, ohne dass ihr Leben wirklich besser wird.',
+    terms:{},
+    agree:'Du siehst einen „Hamsterrad"-Effekt: Mehr Produktion verlangt mehr Arbeit und Tempo, während die Lebensqualität stagniert.',
+    disagree:'Du glaubst, dass Wachstum gerade Entlastung bringt: Mehr Wohlstand ermöglicht bessere Arbeitsbedingungen, Gesundheit und Freizeit.',
+    context:'Wachstum hat die Arbeitszeit historisch stark gesenkt. Kritiker entgegnen, dass Leistungsdruck und psychische Belastung zuletzt wieder zugenommen haben.',
+    simple:'Immer mehr Wachstum bedeutet immer mehr Arbeit und Stress, ohne dass das Leben wirklich besser wird.',
+    axis:'economy', pol:-1 },
+
   // ── Block 5: Fairer Handel ──
   { topic:'◈ Fairer Handel', topicClass:'pill-governance', sideSub:'Fairer Handel',
     text:'[[Handelsabkommen]] zwischen reichen und armen Ländern nützen am Ende vor allem den reichen Ländern. ([[asymmetrische Handelspartnerschaft]])',
@@ -262,8 +484,136 @@ window.QUESTIONS = [
     disagree:'Du glaubst, dass automatische Sanktionen zu starr sind und geopolitische Realitäten ignorieren – Diplomatie und Ermessen sind notwendig.',
     context:'Das WTO-Streitbeilegungssystem ist das einzige bindende internationale Handelsgericht. Es scheitert aber an der Durchsetzung gegen Großmächte.',
     simple:'Ein Land, das WTO-Regeln bricht, soll automatisch bestraft werden, auch wenn es so mächtig ist wie die USA.',
-    axis:'governance', pol:+1 }
+    axis:'governance', pol:+1 },
+
+  // ── Block 6b (erweitert): Konzernmacht & Regulierung ──
+  { topic:'◈ Konzernmacht & Regulierung', topicClass:'pill-governance', sideSub:'Konzernmacht & Regulierung',
+    text:'[[Multinationale Konzerne]] lassen sich nur durch internationale Regeln wirksam kontrollieren. Einzelne Staaten sind dafür zu schwach.',
+    terms:{ 'Multinationale Konzerne':'Großunternehmen, die in vielen Ländern tätig sind (z. B. Apple, Amazon, Nestlé), oft mit Umsätzen größer als die Wirtschaft ganzer Staaten.' },
+    agree:'Du glaubst, dass nur grenzüberschreitende Regeln global agierende Konzerne einhegen können. Nationale Alleingänge laufen ins Leere.',
+    disagree:'Du vertraust auf nationale Gesetze und Wettbewerb. Internationale Regelwerke sind langsam, bürokratisch und schwer demokratisch zu kontrollieren.',
+    context:'Konzerne verschieben Gewinne dorthin, wo Steuern niedrig sind. Erst die international vereinbarte Mindeststeuer (2024) versuchte, dem gemeinsam zu begegnen.',
+    simple:'Große weltweit tätige Konzerne kann man nur mit internationalen Regeln kontrollieren. Einzelne Länder sind dafür zu schwach.',
+    axis:'governance', pol:+1 }, // soft
+
+  { topic:'◈ Konzernmacht & Regulierung', topicClass:'pill-governance', sideSub:'Konzernmacht & Regulierung',
+    text:'[[Schiedsgerichte]] (ISDS), vor denen Konzerne Staaten verklagen können, schränken die demokratische Souveränität unzulässig ein.',
+    terms:{ 'Schiedsgerichte':'ISDS, Investor-Staat-Schiedsverfahren: in Handelsabkommen vereinbarte private Gerichte, vor denen ausländische Investoren Staaten auf Schadenersatz verklagen können, etwa wegen neuer Gesetze.' },
+    agree:'Du siehst darin eine Aushöhlung der Demokratie: Konzerne können gewählte Regierungen für Gesetze, etwa zum Umweltschutz, verklagen, am normalen Rechtsweg vorbei.',
+    disagree:'Du hältst Investitionsschutz für legitim: Er gibt Unternehmen Rechtssicherheit gegen willkürliche Enteignung und fördert so Investitionen.',
+    context:'ISDS war ein Hauptkritikpunkt an TTIP und CETA. Kritiker fürchten den „regulatory chill": dass Staaten aus Angst vor Klagen auf Gesetze verzichten.',
+    simple:'Private Gerichte, vor denen Konzerne Staaten wegen neuer Gesetze verklagen können, schränken die Demokratie zu stark ein.',
+    axis:'governance', pol:-1 },
+
+  { topic:'◈ Konzernmacht & Regulierung', topicClass:'pill-governance', sideSub:'Konzernmacht & Regulierung',
+    text:'Eine globale [[Mindeststeuer]] für Konzerne ist nötig, weil der Steuerwettbewerb zwischen Ländern am Ende allen schadet.',
+    terms:{ 'Mindeststeuer':'2021 von rund 140 Staaten vereinbart: Große Konzerne sollen weltweit mindestens 15 % Steuern zahlen, egal wohin sie ihre Gewinne verschieben.' },
+    agree:'Du willst den Unterbietungswettlauf bei Steuern beenden: Nur gemeinsame Mindestregeln verhindern, dass Konzerne Staaten gegeneinander ausspielen.',
+    disagree:'Du verteidigst Steuerwettbewerb als Disziplin für Staaten und siehst in globalen Steuerregeln einen Eingriff in nationale Souveränität.',
+    context:'Die globale Mindeststeuer von 15 % gilt seit 2024 in der EU. Sie ist einer der größten Erfolge internationaler Steuerkooperation und zugleich schwer durchzusetzen.',
+    simple:'Konzerne sollten weltweit eine Mindeststeuer zahlen, damit Länder sich nicht mit immer niedrigeren Steuern gegenseitig unterbieten.',
+    axis:'governance', pol:+1 },
+
+  { topic:'◈ Konzernmacht & Regulierung', topicClass:'pill-governance', sideSub:'Konzernmacht & Regulierung',
+    text:'Jedes Land sollte selbst entscheiden, wie es Konzerne besteuert und reguliert, ohne internationale Vorgaben.',
+    terms:{},
+    agree:'Du priorisierst nationale Selbstbestimmung: Steuer- und Wirtschaftspolitik gehört in die Hand gewählter nationaler Regierungen, nicht internationaler Gremien.',
+    disagree:'Du glaubst, dass nationale Alleingänge global agierenden Konzernen nicht gewachsen sind und nur gemeinsame Regeln wirken.',
+    context:'Steuerhoheit gilt als Kern nationaler Souveränität. Genau deshalb war die internationale Mindeststeuer so schwer zu verhandeln.',
+    simple:'Jedes Land soll selbst bestimmen, wie es Konzerne besteuert und reguliert, ohne Vorschriften von außen.',
+    axis:'governance', pol:-1 },
+
+  // ── Block 6c (erweitert): Klima-Governance global ──
+  { topic:'◈ Klima-Governance global', topicClass:'pill-governance', sideSub:'Globale Klimapolitik',
+    text:'Den Klimawandel lösen nur verbindliche internationale Abkommen, denen sich alle Länder unterordnen müssen.',
+    terms:{},
+    agree:'Du siehst Klima als globales Problem, das nur durch bindende, gemeinsam durchgesetzte Regeln zu lösen ist. Freiwilligkeit reicht nicht.',
+    disagree:'Du bezweifelst, dass globale Abkommen funktionieren, oder lehnst es ab, nationale Entscheidungen internationalen Gremien zu unterwerfen.',
+    context:'Das Pariser Abkommen (2015) setzt auf freiwillige nationale Ziele statt bindender Vorgaben. Das gilt manchen als Stärke, anderen als entscheidende Schwäche.',
+    simple:'Den Klimawandel kann man nur mit festen internationalen Verträgen lösen, an die sich alle Länder halten müssen.',
+    axis:'governance', pol:+1 },
+
+  { topic:'◈ Klima-Governance global', topicClass:'pill-governance', sideSub:'Globale Klimapolitik',
+    text:'Kein Land sollte sich beim Klimaschutz internationalen Vorgaben unterwerfen, die seiner eigenen Wirtschaft schaden.',
+    terms:{},
+    agree:'Du stellst nationale Interessen voran: Klimaziele dürfen nicht von außen aufgezwungen werden, wenn sie der heimischen Wirtschaft schaden.',
+    disagree:'Du glaubst, dass nationale Wirtschaftsinteressen hinter dem gemeinsamen Klimaschutz zurückstehen müssen, weil sonst niemand handelt.',
+    context:'Der Konflikt zwischen nationalem Eigeninteresse und globalem Gemeingut ist der Kern jeder Klimaverhandlung, das „Trittbrettfahrer"-Problem.',
+    simple:'Kein Land sollte sich beim Klimaschutz Regeln von außen aufzwingen lassen, die seiner Wirtschaft schaden.',
+    axis:'governance', pol:-1 },
+
+  { topic:'◈ Klima-Governance global', topicClass:'pill-governance', sideSub:'Globale Klimapolitik',
+    text:'Ein [[CO₂-Grenzausgleich]] (CBAM) ist legitim, um globale Klimastandards durchzusetzen, auch gegen den Willen anderer Staaten.',
+    terms:{ 'CO₂-Grenzausgleich':'CBAM: eine EU-Abgabe auf importierte Waren (z. B. Stahl, Zement) nach ihrem CO₂-Ausstoß. Sie soll verhindern, dass Produktion in Länder mit laxem Klimaschutz abwandert.' },
+    agree:'Du findest es legitim, Klimastandards über die Grenze hinaus durchzusetzen: Wer schmutzig produziert, soll auch beim Import dafür zahlen.',
+    disagree:'Du siehst darin verdeckten Protektionismus und einen Eingriff in fremde Souveränität: Reiche Länder zwingen anderen ihre Standards auf.',
+    context:'Der EU-CBAM läuft seit 2023 an. Schwellenländer kritisieren ihn als „grünen Protektionismus", die EU verteidigt ihn als Schutz vor Carbon Leakage.',
+    simple:'Die EU darf auf schmutzig produzierte Importe eine CO₂-Abgabe erheben, um Klimastandards durchzusetzen, auch wenn andere Länder dagegen sind.',
+    axis:'governance', pol:+1 },
+
+  { topic:'◈ Klima-Governance global', topicClass:'pill-governance', sideSub:'Globale Klimapolitik',
+    text:'Klimapolitik ist Sache der Nationalstaaten. Internationale Klimabürokratie bringt wenig.',
+    terms:{},
+    agree:'Du traust nationalen Regierungen mehr zu als internationalen Gremien: Vor Ort entschieden, wirkt Klimapolitik schneller und demokratischer.',
+    disagree:'Du glaubst, dass nationale Alleingänge ein globales Problem nicht lösen und Klimaschutz ohne internationale Koordination scheitert.',
+    context:'Klima ist ein globales Gemeingut: Emissionen kennen keine Grenzen. Deshalb gilt internationale Koordination vielen als unverzichtbar, trotz ihrer Schwerfälligkeit.',
+    simple:'Klimaschutz sollten die einzelnen Länder selbst regeln. Internationale Behörden bringen wenig.',
+    axis:'governance', pol:-1 },
+
+  // ── Block 6d (erweitert): Globale Finanzordnung (IWF & Weltbank) ──
+  { topic:'◈ Globale Finanzordnung', topicClass:'pill-governance', sideSub:'IWF & Weltbank',
+    text:'Institutionen wie der [[IWF]] und die [[Weltbank]] sind notwendig, um Finanzkrisen und Staatspleiten zu bewältigen.',
+    terms:{ 'IWF':'Internationaler Währungsfonds: vergibt Notkredite an Staaten in Finanznot, meist gegen Auflagen zu Sparpolitik und Reformen.', 'Weltbank':'Internationale Organisation, die ärmeren Ländern langfristige Kredite und Hilfe für Entwicklungsprojekte gibt, etwa für Infrastruktur, Bildung und Gesundheit.' },
+    agree:'Du siehst diese Institutionen als globales Sicherheitsnetz: Ohne sie würden Staatspleiten ganze Weltregionen destabilisieren.',
+    disagree:'Du hältst sie für undemokratisch oder schädlich: Ihre Hilfe komme mit Auflagen, die ärmere Länder oft tiefer in Probleme treiben.',
+    context:'IWF und Weltbank, 1944 gegründet, sind zentrale Akteure der Weltwirtschaft. Ihre Stimmrechte sind nach Wirtschaftskraft verteilt, die USA haben faktisch ein Vetorecht.',
+    simple:'Organisationen wie der Währungsfonds und die Weltbank werden gebraucht, um Länder in Finanznot vor der Pleite zu retten.',
+    axis:'governance', pol:+1 },
+
+  { topic:'◈ Globale Finanzordnung', topicClass:'pill-governance', sideSub:'IWF & Weltbank',
+    text:'Die [[Auflagen]] von IWF und Weltbank zwingen armen Ländern eine Politik auf, die ihnen mehr schadet als nützt.',
+    terms:{ 'Auflagen':'Bedingungen für Kredite, oft Sparmaßnahmen, Privatisierungen und Marktöffnung, auch „Strukturanpassungsprogramme" genannt.' },
+    agree:'Du siehst die Auflagen als Bevormundung: Erzwungenes Sparen und Privatisieren hat in vielen Ländern Armut und Abhängigkeit verschärft.',
+    disagree:'Du hältst Auflagen für nötig: Kredite ohne Reformbedingungen würden verschwendet, und Geberländer brauchen Sicherheiten.',
+    context:'Die „Strukturanpassungsprogramme" der 1980er und 1990er Jahre gelten heute vielfach als gescheitert: Kürzungen bei Gesundheit und Bildung trafen die Ärmsten am härtesten.',
+    simple:'Die Bedingungen, die Währungsfonds und Weltbank für ihre Kredite stellen, schaden armen Ländern oft mehr, als sie nützen.',
+    axis:'governance', pol:-1 },
+
+  { topic:'◈ Globale Finanzordnung', topicClass:'pill-governance', sideSub:'IWF & Weltbank',
+    text:'Reiche Länder sollten ärmeren Ländern [[Schulden erlassen]] und mehr Entwicklungshilfe geben, als gemeinsame globale Verantwortung.',
+    terms:{ 'Schulden erlassen':'Der teilweise oder vollständige Verzicht von Gläubigern auf Rückzahlung, um überschuldete Länder vor dem Kollaps zu bewahren.' },
+    agree:'Du siehst globale Solidarität als Pflicht: Wohlhabende Länder tragen Mitverantwortung und sollten überschuldeten Ländern aktiv helfen.',
+    disagree:'Du hältst Schuldenerlass für riskant: Er belohnt schlechte Politik, schafft falsche Anreize und entlässt Regierungen aus der Verantwortung.',
+    context:'Die Entschuldungsinitiative für arme Länder (HIPC) ab 1996 erließ Milliarden. Heute wächst die Schuldenlast vieler Länder erneut, auch gegenüber China als großem Gläubiger.',
+    simple:'Reiche Länder sollten armen Ländern Schulden erlassen und mehr helfen, als gemeinsame Verantwortung.',
+    axis:'governance', pol:+1 },
+
+  { topic:'◈ Globale Finanzordnung', topicClass:'pill-governance', sideSub:'IWF & Weltbank',
+    text:'Jedes Land ist für seine eigene Wirtschaft selbst verantwortlich. Internationale Umverteilung über solche Institutionen lehne ich ab.',
+    terms:{},
+    agree:'Du betonst die Eigenverantwortung der Staaten: Internationale Hilfe und Umverteilung schaffen Abhängigkeit statt nachhaltiger Entwicklung.',
+    disagree:'Du glaubst an globale Verantwortung: Historische Ungleichheit und gemeinsame Krisen verlangen internationale Solidarität.',
+    context:'Der Streit um Eigenverantwortung gegen globale Gerechtigkeit prägt die Entwicklungspolitik, auch in der Debatte um Klima-Entschädigungen für arme Länder.',
+    simple:'Jedes Land ist für seine eigene Wirtschaft selbst verantwortlich. Internationale Umverteilung lehne ich ab.',
+    axis:'governance', pol:-1 }
 ];
+
+// ══════════════════════════════════════════
+//  SCHNELLSTART-SET — die sechs ursprünglichen Themenblöcke (24 Fragen).
+//  Markiert per Topic-Zugehörigkeit als q.core, damit der Schnellstart-Modus
+//  robust gegen Reihenfolge- und Anzahländerungen bleibt.
+// ══════════════════════════════════════════
+(function () {
+  const QUICK = new Set([
+    '⇄ Freihandel & Wohlstand',
+    '⇄ US-Protektionismus',
+    '↕ Wachstum & Wohlstand',
+    '↕ Ökonomie & Nachhaltigkeit',
+    '◈ Fairer Handel',
+    '◈ WTO & globale Ordnung'
+  ]);
+  window.QUESTIONS.forEach(q => { q.core = QUICK.has(q.topic); });
+})();
 
 // ══════════════════════════════════════════
 //  LERN-CHECKPOINTS — einer pro Themenblock.
@@ -311,7 +661,71 @@ window.CHECKPOINTS = [
     recap:'Zuletzt ging es um die Frage, wer die Regeln des Welthandels setzen soll: internationale Institutionen wie die WTO oder jeder Staat für sich. Die WTO (166 Mitglieder) ist das einzige Gericht, das Handelsstreits verbindlich entscheiden kann.',
     fact:'Genau dieses Schiedsgericht ist seit 2019 lahmgelegt, weil die USA die Ernennung neuer Richter blockieren.',
     source:'WTO Appellate Body, blockiert seit Dezember 2019',
-    merke:'Regeln sind nur so stark wie ihre Durchsetzung. Das gilt zwischen Staaten genauso wie auf dem Schulhof.' }
+    merke:'Regeln sind nur so stark wie ihre Durchsetzung. Das gilt zwischen Staaten genauso wie auf dem Schulhof.' },
+
+  // ── Erweiterte Blöcke (nur im ausführlichen Modus sichtbar) ──
+  { topic:'⇄ Lieferketten & Abhängigkeit', topicClass:'pill-trade',
+    title:'Lieferketten & Abhängigkeit',
+    recap:'Hier ging es um die Verletzlichkeit globaler Lieferketten. Über Jahrzehnte wurde Produktion dorthin verlagert, wo sie am günstigsten ist, „just in time" und ohne teure Reserven. Das ist effizient, aber anfällig, sobald ein Glied der Kette reißt.',
+    fact:'Taiwan fertigt über 60 % aller Halbleiter weltweit und mehr als 90 % der modernsten Chips. Fällt diese Quelle aus, stockt die halbe Weltwirtschaft.',
+    source:'TSMC / Branchendaten 2023',
+    merke:'Effizienz und Sicherheit stehen in Spannung: Wer jede Reserve wegspart, ist im Normalbetrieb billiger, in der Krise aber erpressbar. Die heutige Antwort heißt „De-Risking": Risiken senken, ohne sich abzuschotten.' },
+
+  { topic:'⇄ Globalisierung & Arbeitsplätze', topicClass:'pill-trade',
+    title:'Globalisierung & Arbeitsplätze',
+    recap:'In diesem Block ging es um Gewinner und Verlierer der Globalisierung. Offene Märkte und Verlagerung („Offshoring") senken Preise und schaffen Exportjobs, treffen aber bestimmte Regionen und Berufsgruppen hart.',
+    fact:'Etwa jeder vierte Arbeitsplatz in Deutschland hängt am Export. Zugleich kostete allein der „China-Schock" die USA rund 1 Million Industriejobs.',
+    source:'Statistisches Bundesamt; Autor, Dorn & Hanson 2013',
+    merke:'Globalisierung vergrößert den Kuchen, verteilt Gewinne und Verluste aber ungleich. Der Streit dreht sich weniger um die Summe als darum, wer die Anpassungskosten trägt.' },
+
+  { topic:'⇄ Handel als Druckmittel', topicClass:'pill-trade',
+    title:'Handel als Druckmittel',
+    recap:'Hier ging es um Geoökonomie, also Handel als Waffe. Sanktionen, Exportverbote und „Decoupling" setzen wirtschaftliche Verflechtung gezielt als politisches Mittel ein. Die Gegenthese lautet: Handel verbindet und macht Krieg teurer.',
+    fact:'Nach dem Überfall auf die Ukraine 2022 verhängte der Westen über 16.000 Einzelsanktionen gegen Russland, das umfangreichste Sanktionsregime der Geschichte.',
+    source:'Castellum.AI Sanktions-Tracker 2023',
+    merke:'Wirtschaftliche Verflechtung schafft Frieden und Verwundbarkeit zugleich: Sie erhöht die Kosten von Konflikten, macht aber auch abhängig und erpressbar.' },
+
+  { topic:'↕ Ungleichheit & Verteilung', topicClass:'pill-economy',
+    title:'Ungleichheit & Verteilung',
+    recap:'In diesem Block stand Wachstum gegen Verteilung. Soll Wohlstand vor allem wachsen oder gerechter geteilt werden? Dahinter steckt ein Grundkonflikt: Ungleichheit als Leistungsanreiz oder als Spaltung der Gesellschaft.',
+    fact:'Das reichste 1 % der Weltbevölkerung besitzt mehr Vermögen als die ärmeren 95 % zusammen.',
+    source:'World Inequality Report 2022',
+    merke:'Wachstum und Verteilung sind kein Entweder-oder, stehen aber in Spannung: Zu wenig Umverteilung spaltet, zu viel kann Anreize schwächen. Wo die Grenze liegt, ist eine politische Wertentscheidung.' },
+
+  { topic:'↕ Konsum & Suffizienz', topicClass:'pill-economy',
+    title:'Konsum & Suffizienz',
+    recap:'Hier ging es um die Frage, wie viel genug ist. Konsum treibt die Wirtschaft an, aber macht mehr davon auch glücklicher? „Suffizienz" bedeutet bewusst weniger, weil zusätzlicher Konsum ab einem Punkt kaum noch Lebensqualität bringt.',
+    fact:'Würden alle Menschen so leben wie der Durchschnitt der reichen Länder, bräuchte die Menschheit mehrere Erden, um den Verbrauch zu decken.',
+    source:'Global Footprint Network',
+    merke:'Ab einem gewissen Wohlstand entkoppeln sich Konsum und Zufriedenheit (Easterlin-Paradoxie). Die Streitfrage bleibt: Lösen wir Umweltprobleme eher durch bessere Technik oder durch weniger Verbrauch?' },
+
+  { topic:'↕ Arbeit, Zeit & Automatisierung', topicClass:'pill-economy',
+    title:'Arbeit, Zeit & Automatisierung',
+    recap:'In diesem Block ging es darum, wofür wir Produktivitätsgewinne nutzen: für mehr Output oder für mehr freie Zeit? Und ob Automatisierung und KI uns Arbeit abnehmen oder wegnehmen.',
+    fact:'Seit 1970 ist die Arbeitsproduktivität in Deutschland stark gestiegen, die durchschnittliche Jahresarbeitszeit aber deutlich gesunken. Ein Teil der Gewinne floss in mehr Freizeit.',
+    source:'OECD Productivity Database',
+    merke:'Technischer Fortschritt hat bisher netto neue Jobs geschaffen und die Arbeitszeit gesenkt. Ob KI diesem Muster folgt oder es bricht, ist eine der großen offenen Fragen.' },
+
+  { topic:'◈ Konzernmacht & Regulierung', topicClass:'pill-governance',
+    title:'Konzernmacht & Regulierung',
+    recap:'Hier ging es um die Machtfrage zwischen Konzernen und Staaten. Global agierende Unternehmen können Gewinne, Produktion und Steuern dorthin verschieben, wo es für sie am günstigsten ist. Einzelne Staaten haben dem wenig entgegenzusetzen.',
+    fact:'Mit der globalen Mindeststeuer einigten sich rund 140 Staaten darauf, dass große Konzerne weltweit mindestens 15 % Steuern zahlen sollen, seit 2024 in der EU in Kraft.',
+    source:'OECD/G20 Inclusive Framework 2021',
+    merke:'Je mobiler Kapital ist, desto schwerer kann ein einzelnes Land es regulieren oder besteuern. Genau deshalb verlagert sich Macht zu internationalen Regeln, auf Kosten nationaler Souveränität.' },
+
+  { topic:'◈ Klima-Governance global', topicClass:'pill-governance',
+    title:'Klima-Governance global',
+    recap:'In diesem Block ging es um die Frage, wer Klimaschutz durchsetzen soll. Klima ist ein globales Gemeingut: Emissionen kennen keine Grenzen, also lohnt sich Nichtstun für den Einzelnen. Das ist das „Trittbrettfahrer-Problem".',
+    fact:'Das Pariser Abkommen von 2015 setzt auf freiwillige nationale Ziele. Mit den bisher zugesagten Maßnahmen steuert die Welt auf rund 2,7 °C Erwärmung zu, deutlich über dem 1,5-°C-Ziel.',
+    source:'Climate Action Tracker 2023; UNFCCC',
+    merke:'Globale Gemeingüter wie das Klima lassen sich national kaum schützen, international aber nur schwer verbindlich regeln. Genau in dieser Lücke steckt die Klimapolitik fest.' },
+
+  { topic:'◈ Globale Finanzordnung', topicClass:'pill-governance',
+    title:'Globale Finanzordnung',
+    recap:'Zuletzt ging es um IWF und Weltbank, die globalen Finanzfeuerwehren. Sie retten Staaten vor der Pleite, knüpfen ihre Kredite aber an Auflagen wie Sparpolitik und Privatisierung. Ob das hilft oder schadet, ist seit Jahrzehnten umstritten.',
+    fact:'Bei IWF und Weltbank richten sich die Stimmrechte nach Wirtschaftskraft. Die USA halten als einziges Land faktisch ein Vetorecht über grundlegende Entscheidungen.',
+    source:'IWF-Quotenverteilung 2023',
+    merke:'Wer zahlt, bestimmt mit: Internationale Finanzinstitutionen geben armen Ländern Rettung und Marktzugang, aber zu Bedingungen, die vor allem die reichen Geberländer prägen.' }
 ];
 
 // js/data.js — anhängen
